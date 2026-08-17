@@ -93,9 +93,16 @@ export function abstentionReasonOf(v: Verdict<unknown>): AbstentionReason | unde
 /* ── the lexicon ─────────────────────────────────────────────────────────── */
 
 /**
- * A `phrase` entry matches a run of adjacent tokens and wins over any `token`
- * entry that overlaps it — `Sales Engineer` is a phrase, so the `Engineer` token
- * never gets to decide it.
+ * Three kinds, in precedence order:
+ *
+ *   `exact`  — matches only when it spans the *whole* segment. This is how
+ *              single-token executive titles are reachable (`ceo`, `owner`,
+ *              `president`) without letting them leak in as a token fallback
+ *              inside a longer string.
+ *   `phrase` — a run of adjacent tokens; beats any `token` entry overlapping it.
+ *              `Sales Engineer` is a phrase, so the `Engineer` token never gets
+ *              to decide it.
+ *   `token`  — one word, the fallback.
  *
  * A multi-value `function` is the *declared fork*: it is how the lexicon says
  * "this ambiguity is in the world, not in this file", and it is the only way to
@@ -105,11 +112,14 @@ export function abstentionReasonOf(v: Verdict<unknown>): AbstentionReason | unde
  */
 export type LexiconEntry = {
   pattern: string;
-  kind: "phrase" | "token";
+  kind: "exact" | "phrase" | "token";
   function?: FunctionId | FunctionId[];
   seniority?: SeniorityId | [SeniorityId, SeniorityId];
   scope?: ScopeId;
-  /** Why this entry exists. Required on phrases: the lexicon is the documentation. */
+  /**
+   * Why this entry exists. Required on `phrase` and `exact` entries: those are
+   * the hard cases, and the lexicon is their documentation.
+   */
   note?: string;
 };
 

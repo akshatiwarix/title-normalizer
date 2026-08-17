@@ -38,7 +38,7 @@ const seniorityIntervalSchema = z
 export const lexiconEntrySchema = z
   .object({
     pattern: z.string().min(1),
-    kind: z.enum(["phrase", "token"]),
+    kind: z.enum(["exact", "phrase", "token"]),
     function: z.union([functionIdSchema, z.array(functionIdSchema).min(2)]).optional(),
     seniority: z.union([seniorityIdSchema, seniorityIntervalSchema]).optional(),
     scope: scopeIdSchema.optional(),
@@ -50,8 +50,9 @@ export const lexiconEntrySchema = z
   .refine((e) => e.kind !== "phrase" || e.pattern.trim().includes(" "), {
     message: "a phrase entry must span more than one token — use kind: 'token' instead",
   })
-  .refine((e) => e.kind !== "phrase" || (e.note !== undefined && e.note.length > 0), {
-    message: "every phrase entry carries a note: the lexicon is the documentation of the hard cases",
+  .refine((e) => e.kind === "token" || (e.note !== undefined && e.note.length > 0), {
+    message:
+      "every phrase and exact entry carries a note: the lexicon is the documentation of the hard cases",
   })
   .refine((e) => !(Array.isArray(e.function) && new Set(e.function).size !== e.function.length), {
     message: "a declared fork must not repeat a function",

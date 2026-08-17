@@ -299,10 +299,17 @@ candidate set means a lexicon entry is wrong, not that the title is unusual.
 
 ### Lexicon entry
 
+**Build-time refinement to decision 16.** A third kind, `exact`, was added during step 7 and is
+recorded here rather than left as silent drift. `exact` matches only when the pattern spans the
+*whole* segment, and precedence is `exact` > longest `phrase` > `token`. It exists because the rule
+"`ExecGeneral` is never reachable by token fallback" is unimplementable otherwise: `ceo`, `owner` and
+`president` are single tokens, so a `phrase` entry cannot express them, and a `token` entry would let
+`Product Owner` reach `ExecGeneral`. Nothing else about decisions 16, 17 or 24 changes.
+
 ```ts
 type LexiconEntry = {
   pattern: string;
-  kind: "phrase" | "token";
+  kind: "exact" | "phrase" | "token";
   function?: FunctionId | FunctionId[];   // an array declares a genuine taxonomy fork
   seniority?: SeniorityId | [SeniorityId, SeniorityId];
   scope?: ScopeId;
