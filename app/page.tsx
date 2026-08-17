@@ -1,69 +1,65 @@
-import Image from "next/image";
+import { ADVERSARIAL, GENERATED } from "@/data";
+import { decodeTitles, evaluateCorpus, normalizeTitles } from "@/lib/normalize";
+import { Console, type CorpusView } from "./components/Console";
 
-export default function Home() {
+/**
+ * The corpora are read and validated on the server, and the *metrics* are computed
+ * there too — over every title in both corpora, not over what the browser receives.
+ *
+ * The generated corpus ships a sample of its rows to the browser because 2,061
+ * labelled titles is most of a megabyte and the table only ever shows a screenful.
+ * The scorecard is unaffected: it is computed over the whole thing server-side, and
+ * the panel says how many rows were shipped rather than letting a reader assume the
+ * sample is the corpus. A silent cap reads as "we measured everything".
+ *
+ * The permalink is decoded here rather than in an effect: it is untrusted input, it
+ * goes through the same validation as everything else, and doing it before the first
+ * render means a bad link produces a message instead of a console that flickers.
+ */
+
+const GENERATED_ROWS_SHOWN = 80;
+
+export default async function Home({ searchParams }: PageProps<"/">) {
+  const params = await searchParams;
+  const encoded = typeof params.t === "string" ? params.t : null;
+  const decoded = encoded ? decodeTitles(encoded) : null;
+
+  const adversarial: CorpusView = {
+    id: ADVERSARIAL.id,
+    label: "adversarial",
+    count: ADVERSARIAL.titles.length,
+    titles: ADVERSARIAL.titles,
+    metrics: evaluateCorpus(
+      ADVERSARIAL,
+      normalizeTitles(ADVERSARIAL.titles.map((title) => title.raw)),
+    ),
+    note: `all ${ADVERSARIAL.titles.length} hand-curated titles, each with a named trap · click a row for its evidence`,
+  };
+
+  const generated: CorpusView = {
+    id: GENERATED.id,
+    label: "generated",
+    count: GENERATED.titles.length,
+    titles: GENERATED.titles.slice(0, GENERATED_ROWS_SHOWN),
+    metrics: evaluateCorpus(
+      GENERATED,
+      normalizeTitles(GENERATED.titles.map((title) => title.raw)),
+    ),
+    note: `${GENERATED_ROWS_SHOWN} of ${GENERATED.titles.length} rows shipped to the browser; the scorecard covers all ${GENERATED.titles.length}`,
+  };
+
+  const linkError =
+    decoded === null || decoded.state === "ok"
+      ? null
+      : decoded.state === "over-cap"
+        ? `that link carries ${decoded.titles} titles and the cap is ${decoded.maxTitles}. Nothing was truncated — ask for a shorter link.`
+        : "that permalink is malformed, so nothing was loaded from it.";
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <Console
+      corpora={[adversarial, generated]}
+      initialTitles={decoded?.state === "ok" ? decoded.titles : null}
+      linkError={linkError}
+    />
   );
 }
