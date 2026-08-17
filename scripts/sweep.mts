@@ -13,7 +13,8 @@ import { ADVERSARIAL, GENERATED } from "@/data";
 import { CANONICAL_ROLES } from "@/data/roles";
 import { COMPILED, LEXICON, compileLexicon } from "@/lib/normalize/lexicon";
 import { isContiguous } from "@/lib/normalize/ladder";
-import { normalizeTitle } from "@/lib/normalize/resolve";
+import { normalizeTitle, normalizeTitles } from "@/lib/normalize/resolve";
+import { evaluateCorpus } from "@/lib/normalize/evaluate";
 import { patternTokens } from "@/lib/normalize/tokenize";
 import {
   BAND_IDS,
@@ -25,6 +26,7 @@ import {
   personaLabel,
 } from "@/lib/normalize/taxonomy";
 import type { Corpus, Result, Verdict } from "@/lib/normalize/types";
+import { ABSTENTION_REASONS, DIMENSIONS } from "@/lib/normalize/types";
 
 const CORPORA: Corpus[] = [ADVERSARIAL, GENERATED];
 const failures: string[] = [];
@@ -37,12 +39,6 @@ function answerOf(verdict: Verdict<string>): string {
   if (verdict.state === "resolved") return `=${verdict.value}`;
   if (verdict.state === "ambiguous") return `?${[...verdict.candidates].sort().join("|")}`;
   return `!${verdict.reason}`;
-}
-
-function fingerprint(result: Result): string {
-  return [result.function, result.seniority, result.scope, result.band, result.persona]
-    .map(answerOf)
-    .join(" ");
 }
 
 /**
@@ -329,6 +325,44 @@ for (const corpus of CORPORA) {
   console.log(`  ${corpus.id.padEnd(12)} ${corpus.titles.length} titles`);
 }
 console.log(`  lexicon      ${LEXICON.length} entries (${COMPILED.phrases.length} phrases, ${COMPILED.exact.length} exact, ${COMPILED.tokens.size} tokens)`);
+
+/* ── the scorecard ───────────────────────────────────────────────────────── */
+
+const scored = CORPORA.map((corpus) =>
+  evaluateCorpus(corpus, normalizeTitles(corpus.titles.map((title) => title.raw))),
+);
+
+function percent(value: number): string {
+  return `${(value * 100).toFixed(1)}%`;
+}
+
+/** An em dash, not 0.0% — a corpus with no abstentions has no abstention precision. */
+function precision(value: number, abstentions: number): string {
+  return abstentions === 0 ? "—" : percent(value);
+}
+
+console.log("\nscorecard — the two corpora are never averaged");
+console.log("─────────────────────────────────────────────");
+console.log(
+  `  ${"dimension".padEnd(10)}${"corpus".padEnd(14)}${"coverage".padStart(9)}${"acc/resolved".padStart(14)}${"SILENT ERR".padStart(12)}${"abstain=".padStart(10)}${"abstain⊇".padStart(10)}`,
+);
+for (const dimension of DIMENSIONS) {
+  for (const metrics of scored) {
+    const d = metrics.dimensions[dimension];
+    console.log(
+      `  ${dimension.padEnd(10)}${metrics.corpus.padEnd(14)}${percent(d.coverage).padStart(9)}${percent(d.accuracyOnResolved).padStart(14)}${`${d.silentErrors} (${percent(d.silentErrorRate)})`.padStart(12)}${precision(d.abstentionPrecisionExact, d.abstentions).padStart(10)}${precision(d.abstentionPrecisionContaining, d.abstentions).padStart(10)}`,
+    );
+  }
+}
+
+console.log("\nabstentions by reason");
+console.log("─────────────────────");
+for (const metrics of scored) {
+  const parts = ABSTENTION_REASONS.map(
+    (reason) => `${reason} ${metrics.reasons[reason]}`,
+  ).join("  ");
+  console.log(`  ${metrics.corpus.padEnd(13)}${parts}`);
+}
 
 if (failures.length > 0) {
   console.error(`\n${failures.length} violation(s)`);

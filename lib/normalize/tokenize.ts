@@ -178,6 +178,26 @@ function hasRegionToken(fragment: string): boolean {
   return words(fragment).some((word) => REGION_TOKENS[word] !== undefined);
 }
 
+/**
+ * Region acronyms that are also ordinary English words. They are trusted inside a
+ * kept part and *not* trusted inside a discarded one, because `| come join us` would
+ * otherwise make a title US-scoped.
+ */
+const AMBIGUOUS_REGIONS = new Set(["us", "na", "uk", "in"]);
+
+/**
+ * Geography survives the junk it was stapled behind. `VP Sales | Acme Corp, EMEA` is
+ * an EMEA role, and discarding the company name should not discard the region with
+ * it — so a stripped fragment is still scanned, but only for an unambiguous region
+ * acronym in final position, which is where a geography suffix actually appears.
+ */
+function trailingRegion(fragment: string): string | undefined {
+  const fragmentWords = words(fragment);
+  const last = fragmentWords[fragmentWords.length - 1];
+  if (last === undefined || AMBIGUOUS_REGIONS.has(last)) return undefined;
+  return REGION_TOKENS[last] === undefined ? undefined : last;
+}
+
 function looksJunky(fragment: string): boolean {
   const lower = fragment.toLowerCase();
   if (URLISH.test(lower) || HASHTAG.test(fragment)) return true;
@@ -290,6 +310,7 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
   const kept: Part[] = [];
 
   let anyJunk = false;
+  const salvagedRegions: string[] = [];
   for (const part of parts) {
     const withoutEmoji = deEmoji(part.text);
     if (withoutEmoji !== part.text) {
@@ -300,6 +321,7 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
     if (looksJunky(withoutEmoji)) {
       stripped.push(withoutEmoji);
       anyJunk = true;
+      salvagedRegions.push(...[trailingRegion(withoutEmoji)].filter((r): r is string => !!r));
       continue;
     }
     // A region token counts as content even though the lexicon knows nothing about
@@ -336,7 +358,10 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
   }
 
   const tokens: string[] = [];
-  const regions: RegionHit[] = [];
+  const regions: RegionHit[] = salvagedRegions.map((token) => ({
+    token,
+    scope: REGION_TOKENS[token] ?? "Regional",
+  }));
 
   kept.forEach((part, index) => {
     if (index > 0 && part.peer) tokens.push(CONJUNCTION);

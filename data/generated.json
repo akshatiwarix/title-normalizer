@@ -338,11 +338,11 @@
    }
   },
   {
-   "raw": "Sales Intern @ Northwind Traders, US",
+   "raw": "Sales Intern, Benelux | ex-Contoso",
    "canonical": "Sales Intern",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -756,11 +756,11 @@
    }
   },
   {
-   "raw": "Sales Development Representative @ Northwind Traders, LATAM",
+   "raw": "Sales Development Representative, DACH | Acme Corp",
    "canonical": "Sales Development Representative",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -1057,11 +1057,11 @@
    }
   },
   {
-   "raw": "Business Development Representative, MBA, Benelux",
+   "raw": "Business Development Representative, APAC, CPA",
    "canonical": "Business Development Representative",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -1281,12 +1281,12 @@
    }
   },
   {
-   "raw": "BUSINESS DEVELOPMENT REPRESENTATIVE | Acme Corp, CPA",
+   "raw": "BUSINESS DEVELOPMENT REPRESENTATIVE, PhD | #opentowork",
    "canonical": "Business Development Representative",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -2309,11 +2309,11 @@
    }
   },
   {
-   "raw": "Sales Representative, PMP, Nordics",
+   "raw": "Sales Representative, US, CFA",
    "canonical": "Sales Representative",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -2746,11 +2746,11 @@
    }
   },
   {
-   "raw": "Sales Engineer 🚀🚀, MBA",
+   "raw": "Sales Engineer, CFA | We're hiring 🚀",
    "canonical": "Sales Engineer",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -3020,12 +3020,12 @@
    }
   },
   {
-   "raw": "Solutions, Engineer | We're hiring 🚀, MBA",
+   "raw": "Solutions, Engineer, MBA | We're hiring 🚀",
    "canonical": "Solutions Engineer",
    "ops": [
     "punctuation-swap",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -3106,11 +3106,11 @@
    }
   },
   {
-   "raw": "Solutions Engineer, MBA, APAC",
+   "raw": "Solutions Engineer, APAC, MBA",
    "canonical": "Solutions Engineer",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -4135,11 +4135,11 @@
    }
   },
   {
-   "raw": "Channel Manager | We're hiring 🚀, APAC",
+   "raw": "Channel Manager, APAC | We're hiring 🚀",
    "canonical": "Channel Manager",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -5111,12 +5111,12 @@
    }
   },
   {
-   "raw": "Sales Director | ex-Contoso, PMP",
+   "raw": "Sales Director, PMP | ex-Contoso",
    "canonical": "Sales Director",
    "ops": [
     "whitespace-slip",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -6803,12 +6803,12 @@
    }
   },
   {
-   "raw": "CRO | Acme Corp, EMEA",
+   "raw": "CRO, APAC | We're hiring 🚀",
    "canonical": "Chief Revenue Officer",
    "ops": [
     "abbreviation",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -7497,12 +7497,12 @@
    }
   },
   {
-   "raw": "Coordinator (Marketing), PMP, ANZ",
+   "raw": "Coordinator (Marketing), US, PMP",
    "canonical": "Marketing Coordinator",
    "ops": [
     "parenthetical-department",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -8190,11 +8190,11 @@
    }
   },
   {
-   "raw": "Content Specialist | #opentowork, MBA",
+   "raw": "Content Specialist, CFA | We're hiring 🚀",
    "canonical": "Content Specialist",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -8577,11 +8577,11 @@
    }
   },
   {
-   "raw": "SEO Specialist @ Northwind Traders, PMP",
+   "raw": "SEO Specialist, CPA | ex-Contoso",
    "canonical": "SEO Specialist",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -8773,11 +8773,11 @@
    }
   },
   {
-   "raw": "SEO Specialist | ex-Contoso, APAC",
+   "raw": "SEO Specialist, US | We're hiring 🚀",
    "canonical": "SEO Specialist",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -9104,11 +9104,11 @@
    }
   },
   {
-   "raw": "Brand Manager, CPA, DACH",
+   "raw": "Brand Manager, Benelux, PhD",
    "canonical": "Brand Manager",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -9326,11 +9326,11 @@
    }
   },
   {
-   "raw": "Product Marketing Manager, PhD, DACH",
+   "raw": "Product Marketing Manager, LATAM, CPA",
    "canonical": "Product Marketing Manager",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -9987,11 +9987,11 @@
    }
   },
   {
-   "raw": "Field Marketing Manager | We're hiring 🚀, CFA",
+   "raw": "Field Marketing Manager, MBA 🚀🚀",
    "canonical": "Field Marketing Manager",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -10518,12 +10518,12 @@
    }
   },
   {
-   "raw": "Growth Marketing, Manager, PhD, Benelux",
+   "raw": "Growth Marketing, Manager, APAC, CPA",
    "canonical": "Growth Marketing Manager",
    "ops": [
     "punctuation-swap",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -10796,11 +10796,11 @@
    }
   },
   {
-   "raw": "Growth Marketing Manager | Acme Corp, Benelux",
+   "raw": "Growth Marketing Manager, APAC | #opentowork",
    "canonical": "Growth Marketing Manager",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -11097,12 +11097,12 @@
    }
   },
   {
-   "raw": "Communications, Manager 🚀🚀, ANZ",
+   "raw": "Communications, Manager, UK | ex-Contoso",
    "canonical": "Communications Manager",
    "ops": [
     "punctuation-swap",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -12347,12 +12347,12 @@
    }
   },
   {
-   "raw": "Vp of marketing, PhD, Benelux",
+   "raw": "Vp of marketing, LATAM, CPA",
    "canonical": "VP of Marketing",
    "ops": [
     "case-mangle",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -13183,11 +13183,11 @@
    }
   },
   {
-   "raw": "Revenue Operations Analyst, MBA, DACH",
+   "raw": "Revenue Operations Analyst, EMEA, PhD",
    "canonical": "Revenue Operations Analyst",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -13596,12 +13596,12 @@
    }
   },
   {
-   "raw": "Sales operations analyst, CFA, UK",
+   "raw": "Sales operations analyst, US, CFA",
    "canonical": "Sales Operations Analyst",
    "ops": [
     "case-mangle",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -13625,12 +13625,12 @@
    }
   },
   {
-   "raw": "Sales  Operations Analyst | ex-Contoso, MBA",
+   "raw": "Sales  Operations Analyst, PMP | We're hiring 🚀",
    "canonical": "Sales Operations Analyst",
    "ops": [
     "whitespace-slip",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -14731,12 +14731,12 @@
    }
   },
   {
-   "raw": "Sales Enablement Mgr. | We're hiring 🚀, CFA",
+   "raw": "Sales Enablement Mgr., MBA | #opentowork",
    "canonical": "Sales Enablement Manager",
    "ops": [
     "abbreviation",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -14816,11 +14816,11 @@
    }
   },
   {
-   "raw": "Sales Enablement Manager, MBA, LATAM",
+   "raw": "Sales Enablement Manager, EMEA, PhD",
    "canonical": "Sales Enablement Manager",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -15150,12 +15150,12 @@
    }
   },
   {
-   "raw": "Revenue Operations Mgr. | #opentowork, UK",
+   "raw": "Revenue Operations Mgr., Benelux 🚀🚀",
    "canonical": "Revenue Operations Manager",
    "ops": [
     "abbreviation",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -15706,12 +15706,12 @@
    }
   },
   {
-   "raw": "Marketing  Operations Manager | #opentowork, CFA",
+   "raw": "Marketing  Operations Manager, CPA 🚀🚀",
    "canonical": "Marketing Operations Manager",
    "ops": [
     "whitespace-slip",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -15735,12 +15735,12 @@
    }
   },
   {
-   "raw": "Marketing Operations Manager | We're hiring 🚀, MBA",
+   "raw": "Marketing Operations Manager, MBA | We're hiring 🚀",
    "canonical": "Marketing Operations Manager",
    "ops": [
     "whitespace-slip",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -15900,12 +15900,12 @@
    }
   },
   {
-   "raw": "  Marketing Operations Manager  @ Northwind Traders, PhD",
+   "raw": "  Marketing Operations Manager , CPA @ Northwind Traders",
    "canonical": "Marketing Operations Manager",
    "ops": [
     "whitespace-slip",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -17869,12 +17869,12 @@
    }
   },
   {
-   "raw": "Vice President of Revenue Operations, MBA, Benelux",
+   "raw": "Vice President of Revenue Operations, APAC, CPA",
    "canonical": "VP of Revenue Operations",
    "ops": [
     "abbreviation",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -18179,11 +18179,11 @@
    }
   },
   {
-   "raw": "VP of Revenue Operations | Acme Corp, MBA",
+   "raw": "VP of Revenue Operations, PhD | We're hiring 🚀",
    "canonical": "VP of Revenue Operations",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -19692,11 +19692,11 @@
    }
   },
   {
-   "raw": "Onboarding Specialist @ Northwind Traders, MBA",
+   "raw": "Onboarding Specialist, CPA | We're hiring 🚀",
    "canonical": "Onboarding Specialist",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -19882,11 +19882,11 @@
    }
   },
   {
-   "raw": "Renewals Manager, CPA, EMEA",
+   "raw": "Renewals Manager, Benelux, MBA",
    "canonical": "Renewals Manager",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -19910,11 +19910,11 @@
    }
   },
   {
-   "raw": "Renewals Manager 🚀🚀, Benelux",
+   "raw": "Renewals Manager, US | #opentowork",
    "canonical": "Renewals Manager",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -19938,12 +19938,12 @@
    }
   },
   {
-   "raw": "Renewals Mgr. | Acme Corp, ANZ",
+   "raw": "Renewals Mgr., LATAM | ex-Contoso",
    "canonical": "Renewals Manager",
    "ops": [
     "abbreviation",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -20107,11 +20107,11 @@
    }
   },
   {
-   "raw": "Renewals Manager 🚀🚀, MBA",
+   "raw": "Renewals Manager, CFA | We're hiring 🚀",
    "canonical": "Renewals Manager",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -20135,11 +20135,11 @@
    }
   },
   {
-   "raw": "Renewals Manager | Acme Corp, APAC",
+   "raw": "Renewals Manager, APAC | Acme Corp",
    "canonical": "Renewals Manager",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -20742,12 +20742,12 @@
    }
   },
   {
-   "raw": "VP, Customer Success | We're hiring 🚀, PMP",
+   "raw": "VP, Customer Success, MBA 🚀🚀",
    "canonical": "VP of Customer Success",
    "ops": [
     "punctuation-swap",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -21763,12 +21763,12 @@
    }
   },
   {
-   "raw": "Customer   Support Agent | ex-Contoso, PMP",
+   "raw": "Customer   Support Agent, PMP | ex-Contoso",
    "canonical": "Customer Support Agent",
    "ops": [
     "separator-variant",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -23319,12 +23319,12 @@
    }
   },
   {
-   "raw": "VP OF CUSTOMER SUPPORT | We're hiring 🚀, US",
+   "raw": "VP OF CUSTOMER SUPPORT, EMEA 🚀🚀",
    "canonical": "VP of Customer Support",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -23348,11 +23348,11 @@
    }
   },
   {
-   "raw": "VP of Customer Support | #opentowork, LATAM",
+   "raw": "VP of Customer Support, Nordics | Acme Corp",
    "canonical": "VP of Customer Support",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -23842,11 +23842,11 @@
    }
   },
   {
-   "raw": "Engineering Intern @ Northwind Traders, US",
+   "raw": "Engineering Intern, Benelux 🚀🚀",
    "canonical": "Engineering Intern",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -24118,12 +24118,12 @@
    }
   },
   {
-   "raw": "software engineer | ex-Contoso, EMEA",
+   "raw": "software engineer, US | We're hiring 🚀",
    "canonical": "Software Engineer",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -24421,12 +24421,12 @@
    }
   },
   {
-   "raw": "Senior Software Engineer | ex-Contoso, PMP",
+   "raw": "Senior Software Engineer, PMP | ex-Contoso",
    "canonical": "Senior Software Engineer",
    "ops": [
     "whitespace-slip",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -26663,11 +26663,11 @@
    }
   },
   {
-   "raw": "Engineering Manager | We're hiring 🚀, MBA",
+   "raw": "Engineering Manager, MBA | We're hiring 🚀",
    "canonical": "Engineering Manager",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -28708,12 +28708,12 @@
    }
   },
   {
-   "raw": "Associate Product, Manager, PhD, US",
+   "raw": "Associate Product, Manager, LATAM, PMP",
    "canonical": "Associate Product Manager",
    "ops": [
     "punctuation-swap",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -30209,11 +30209,11 @@
    }
   },
   {
-   "raw": "VP of Product | ex-Contoso, APAC",
+   "raw": "VP of Product, ANZ | Acme Corp",
    "canonical": "VP of Product",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -31892,12 +31892,12 @@
    }
   },
   {
-   "raw": "Ux designer | Acme Corp, PhD",
+   "raw": "Ux designer, PhD | Acme Corp",
    "canonical": "UX Designer",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -32197,12 +32197,12 @@
    }
   },
   {
-   "raw": "UX DESIGNER 🚀🚀, PhD",
+   "raw": "UX DESIGNER, CFA | Acme Corp",
    "canonical": "UX Designer",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -33195,11 +33195,11 @@
    }
   },
   {
-   "raw": "Creative Director | Acme Corp, DACH",
+   "raw": "Creative Director, LATAM @ Northwind Traders",
    "canonical": "Creative Director",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -33470,12 +33470,12 @@
    }
   },
   {
-   "raw": "Director, Design, MBA, US",
+   "raw": "Director, Design, EMEA, PMP",
    "canonical": "Director of Design",
    "ops": [
     "punctuation-swap",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -33499,11 +33499,11 @@
    }
   },
   {
-   "raw": "Director of Design | We're hiring 🚀, CPA",
+   "raw": "Director of Design, MBA | #opentowork",
    "canonical": "Director of Design",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -33611,11 +33611,11 @@
    }
   },
   {
-   "raw": "Director of Design @ Northwind Traders, LATAM",
+   "raw": "Director of Design, Benelux | Acme Corp",
    "canonical": "Director of Design",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -34640,12 +34640,12 @@
    }
   },
   {
-   "raw": "Data analyst | We're hiring 🚀, CFA",
+   "raw": "Data analyst, MBA | #opentowork",
    "canonical": "Data Analyst",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -35089,11 +35089,11 @@
    }
   },
   {
-   "raw": "Senior Data Analyst | Acme Corp, ANZ",
+   "raw": "Senior Data Analyst, LATAM | ex-Contoso",
    "canonical": "Senior Data Analyst",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -35117,12 +35117,12 @@
    }
   },
   {
-   "raw": "Sr. Data Analyst @ Northwind Traders, PhD",
+   "raw": "Sr. Data Analyst, CPA @ Northwind Traders",
    "canonical": "Senior Data Analyst",
    "ops": [
     "abbreviation",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -35312,11 +35312,11 @@
    }
   },
   {
-   "raw": "Business Intelligence Analyst | #opentowork, DACH",
+   "raw": "Business Intelligence Analyst, Nordics @ Northwind Traders",
    "canonical": "Business Intelligence Analyst",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -36347,12 +36347,12 @@
    }
   },
   {
-   "raw": "  Senior Data Scientist , MBA, EMEA",
+   "raw": "  Senior Data Scientist , EMEA, MBA",
    "canonical": "Senior Data Scientist",
    "ops": [
     "whitespace-slip",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -37264,12 +37264,12 @@
    }
   },
   {
-   "raw": "Data science manager, PhD, LATAM",
+   "raw": "Data science manager, LATAM, PhD",
    "canonical": "Data Science Manager",
    "ops": [
     "case-mangle",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -37622,12 +37622,12 @@
    }
   },
   {
-   "raw": "DIRECTOR OF ANALYTICS @ Northwind Traders, CFA",
+   "raw": "DIRECTOR OF ANALYTICS, CPA 🚀🚀",
    "canonical": "Director of Analytics",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -37869,12 +37869,12 @@
    }
   },
   {
-   "raw": "VP of Data | ex-Contoso, PMP, ANZ",
+   "raw": "VP of Data, ANZ, PMP | ex-Contoso",
    "canonical": "VP of Data",
    "ops": [
-    "appended-junk",
+    "region-suffix",
     "credential-suffix",
-    "region-suffix"
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -38309,12 +38309,12 @@
    }
   },
   {
-   "raw": "FINANCE INTERN 🚀🚀, CFA",
+   "raw": "FINANCE INTERN, CFA 🚀🚀",
    "canonical": "Finance Intern",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -39849,12 +39849,12 @@
    }
   },
   {
-   "raw": "Manager (Finance) | ex-Contoso, MBA",
+   "raw": "Manager (Finance), PMP | We're hiring 🚀",
    "canonical": "Finance Manager",
    "ops": [
     "parenthetical-department",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -40100,11 +40100,11 @@
    }
   },
   {
-   "raw": "Finance Manager | ex-Contoso, PhD",
+   "raw": "Finance Manager, PMP | Acme Corp",
    "canonical": "Finance Manager",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -40322,11 +40322,11 @@
    }
   },
   {
-   "raw": "Procurement Manager 🚀🚀, MBA",
+   "raw": "Procurement Manager, PMP | We're hiring 🚀",
    "canonical": "Procurement Manager",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -40738,12 +40738,12 @@
    }
   },
   {
-   "raw": "Finance – Director | We're hiring 🚀, DACH",
+   "raw": "Finance – Director, EMEA @ Northwind Traders",
    "canonical": "Finance Director",
    "ops": [
     "separator-variant",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -40962,12 +40962,12 @@
    }
   },
   {
-   "raw": "Finance – Director 🚀🚀, MBA",
+   "raw": "Finance – Director, CFA | We're hiring 🚀",
    "canonical": "Finance Director",
    "ops": [
     "separator-variant",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -41521,12 +41521,12 @@
    }
   },
   {
-   "raw": "VP of Finance, DACH | ex-Contoso, MBA",
+   "raw": "VP of Finance, DACH, PMP | We're hiring 🚀",
    "canonical": "VP of Finance",
    "ops": [
     "region-suffix",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -41854,12 +41854,12 @@
    }
   },
   {
-   "raw": "Chief financial officer, CPA, Benelux",
+   "raw": "Chief financial officer, Benelux, CPA",
    "canonical": "Chief Financial Officer",
    "ops": [
     "case-mangle",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -42630,11 +42630,11 @@
    }
   },
   {
-   "raw": "Technical Recruiter | #opentowork, PhD",
+   "raw": "Technical Recruiter, CFA | Acme Corp",
    "canonical": "Technical Recruiter",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -42771,12 +42771,12 @@
    }
   },
   {
-   "raw": "  Technical Recruiter  | We're hiring 🚀, APAC",
+   "raw": "  Technical Recruiter , EMEA | We're hiring 🚀",
    "canonical": "Technical Recruiter",
    "ops": [
     "whitespace-slip",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -43798,12 +43798,12 @@
    }
   },
   {
-   "raw": "PEOPLE OPERATIONS MANAGER | Acme Corp, EMEA",
+   "raw": "PEOPLE OPERATIONS MANAGER, LATAM | We're hiring 🚀",
    "canonical": "People Operations Manager",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -46094,11 +46094,11 @@
    }
   },
   {
-   "raw": "Paralegal | #opentowork, Nordics",
+   "raw": "Paralegal, Nordics | #opentowork",
    "canonical": "Paralegal",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -46149,11 +46149,11 @@
    }
   },
   {
-   "raw": "Paralegal | Acme Corp, DACH",
+   "raw": "Paralegal, APAC @ Northwind Traders",
    "canonical": "Paralegal",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -46259,11 +46259,11 @@
    }
   },
   {
-   "raw": "Paralegal, MBA, LATAM",
+   "raw": "Paralegal, EMEA, PhD",
    "canonical": "Paralegal",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -46368,11 +46368,11 @@
    }
   },
   {
-   "raw": "Legal Counsel, PhD, ANZ",
+   "raw": "Legal Counsel, LATAM, PMP",
    "canonical": "Legal Counsel",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -46562,11 +46562,11 @@
    }
   },
   {
-   "raw": "Legal Counsel @ Northwind Traders, ANZ",
+   "raw": "Legal Counsel, DACH | ex-Contoso",
    "canonical": "Legal Counsel",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -47229,12 +47229,12 @@
    }
   },
   {
-   "raw": "Compliance - Manager, CFA, Benelux",
+   "raw": "Compliance - Manager, UK, CPA",
    "canonical": "Compliance Manager",
    "ops": [
     "separator-variant",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -48743,11 +48743,11 @@
    }
   },
   {
-   "raw": "Systems Administrator | #opentowork, EMEA",
+   "raw": "Systems Administrator, Nordics | We're hiring 🚀",
    "canonical": "Systems Administrator",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -48771,12 +48771,12 @@
    }
   },
   {
-   "raw": "Systems Administrator, PhD, Benelux",
+   "raw": "Systems Administrator, LATAM, CPA",
    "canonical": "Systems Administrator",
    "ops": [
     "whitespace-slip",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -49300,12 +49300,12 @@
    }
   },
   {
-   "raw": "it manager | ex-Contoso, CFA",
+   "raw": "it manager, PMP 🚀🚀",
    "canonical": "IT Manager",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -51329,12 +51329,12 @@
    }
   },
   {
-   "raw": "Security analyst @ Northwind Traders, CPA",
+   "raw": "Security analyst, PhD | #opentowork",
    "canonical": "Security Analyst",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -51471,12 +51471,12 @@
    }
   },
   {
-   "raw": "Security Analyst, CPA | We're hiring 🚀, Nordics",
+   "raw": "Security Analyst, Nordics, MBA | #opentowork",
    "canonical": "Security Analyst",
    "ops": [
+    "region-suffix",
     "credential-suffix",
-    "appended-junk",
-    "region-suffix"
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -52022,12 +52022,12 @@
    }
   },
   {
-   "raw": "Senior security engineer | #opentowork, MBA",
+   "raw": "Senior security engineer, CFA | Acme Corp",
    "canonical": "Senior Security Engineer",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -52215,11 +52215,11 @@
    }
   },
   {
-   "raw": "Information Security Manager | Acme Corp, EMEA",
+   "raw": "Information Security Manager, LATAM | We're hiring 🚀",
    "canonical": "Information Security Manager",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -52412,12 +52412,12 @@
    }
   },
   {
-   "raw": "Information   Security Manager 🚀🚀, EMEA",
+   "raw": "Information   Security Manager, UK | We're hiring 🚀",
    "canonical": "Information Security Manager",
    "ops": [
     "separator-variant",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -52826,12 +52826,12 @@
    }
   },
   {
-   "raw": "Security Operations Manager, CPA, ANZ",
+   "raw": "Security Operations Manager, Benelux, PMP",
    "canonical": "Security Operations Manager",
    "ops": [
     "whitespace-slip",
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -53326,12 +53326,12 @@
    }
   },
   {
-   "raw": "VP - Security @ Northwind Traders, ANZ",
+   "raw": "VP - Security, DACH | ex-Contoso",
    "canonical": "VP of Security",
    "ops": [
     "separator-variant",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -53932,12 +53932,12 @@
    }
   },
   {
-   "raw": "CISO | #opentowork, MBA",
+   "raw": "CISO, CPA | We're hiring 🚀",
    "canonical": "Chief Information Security Officer",
    "ops": [
     "abbreviation",
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -54817,11 +54817,11 @@
    }
   },
   {
-   "raw": "Chief Executive Officer 🚀🚀, DACH",
+   "raw": "Chief Executive Officer, UK @ Northwind Traders",
    "canonical": "Chief Executive Officer",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -55200,12 +55200,12 @@
    }
   },
   {
-   "raw": "COO | #opentowork, DACH",
+   "raw": "COO, Benelux @ Northwind Traders",
    "canonical": "Chief Operating Officer",
    "ops": [
     "abbreviation",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -55500,11 +55500,11 @@
    }
   },
   {
-   "raw": "President | #opentowork, PhD",
+   "raw": "President, CFA @ Northwind Traders",
    "canonical": "President",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -55665,11 +55665,11 @@
    }
   },
   {
-   "raw": "President | ex-Contoso, PMP",
+   "raw": "President, PMP | ex-Contoso",
    "canonical": "President",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -55857,12 +55857,12 @@
    }
   },
   {
-   "raw": "FOUNDER | Acme Corp, US",
+   "raw": "FOUNDER, APAC | ex-Contoso",
    "canonical": "Founder",
    "ops": [
     "case-mangle",
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -56049,11 +56049,11 @@
    }
   },
   {
-   "raw": "Co-Founder, PMP, LATAM",
+   "raw": "Co-Founder, ANZ, PhD",
    "canonical": "Co-Founder",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -56104,11 +56104,11 @@
    }
   },
   {
-   "raw": "Co-Founder 🚀🚀, CPA",
+   "raw": "Co-Founder, CFA | #opentowork",
    "canonical": "Co-Founder",
    "ops": [
-    "appended-junk",
-    "credential-suffix"
+    "credential-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -56214,11 +56214,11 @@
    }
   },
   {
-   "raw": "Owner, CPA, EMEA",
+   "raw": "Owner, Benelux, MBA",
    "canonical": "Owner",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -56381,11 +56381,11 @@
    }
   },
   {
-   "raw": "Owner | ex-Contoso, US",
+   "raw": "Owner, ANZ 🚀🚀",
    "canonical": "Owner",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -56709,11 +56709,11 @@
    }
   },
   {
-   "raw": "Managing Partner, PhD, DACH",
+   "raw": "Managing Partner, DACH, CPA",
    "canonical": "Managing Partner",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "region-suffix",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -56819,11 +56819,11 @@
    }
   },
   {
-   "raw": "Board Member @ Northwind Traders, LATAM",
+   "raw": "Board Member, Benelux | Acme Corp",
    "canonical": "Board Member",
    "ops": [
-    "appended-junk",
-    "region-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {

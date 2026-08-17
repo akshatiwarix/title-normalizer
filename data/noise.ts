@@ -221,11 +221,11 @@ export const NOISE_OP_IDS = NOISE_OPS.map((op) => op.id);
  * had already appended, and the result is a title whose function word is buried in
  * a fragment the engine is right to discard.
  */
-const TRAILING_OPS = new Set(["appended-junk", "credential-suffix", "region-suffix"]);
+const TRAILING_ORDER = ["region-suffix", "credential-suffix", "appended-junk"];
 
 function orderOps(opIds: readonly string[]): string[] {
-  const structural = opIds.filter((id) => !TRAILING_OPS.has(id));
-  const trailing = opIds.filter((id) => TRAILING_OPS.has(id));
+  const structural = opIds.filter((id) => !TRAILING_ORDER.includes(id));
+  const trailing = TRAILING_ORDER.filter((id) => opIds.includes(id));
   return [...structural, ...trailing];
 }
 
