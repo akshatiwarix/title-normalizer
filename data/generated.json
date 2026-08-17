@@ -29716,451 +29716,6 @@
    }
   },
   {
-   "raw": "Group Product Manager",
-   "canonical": "Group Product Manager",
-   "ops": [],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group product manager | We're hiring 🚀",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "case-mangle",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "group product mgr.",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "abbreviation",
-    "case-mangle"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "  Group Product - Manager , Benelux",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "separator-variant",
-    "whitespace-slip",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group, Product Manager",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group product, manager",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "  Group Product Manager  | Acme Corp",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "whitespace-slip",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group product manager, CPA",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "case-mangle",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group product manager, MBA",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "case-mangle",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group Product Manager, EMEA",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "GROUP PRODUCT, MANAGER, PhD",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group Product Manager, APAC",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "GROUP, PRODUCT MANAGER @ Northwind Traders",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "punctuation-swap",
-    "case-mangle",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group Product - Mgr.",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "separator-variant",
-    "abbreviation"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Group –, Product Manager",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "separator-variant",
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "GROUP PRODUCT MANAGER, DACH",
-   "canonical": "Group Product Manager",
-   "ops": [
-    "case-mangle",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Director of Product",
    "canonical": "Director of Product",
    "ops": [],
@@ -30186,9 +29741,11 @@
    }
   },
   {
-   "raw": "Director of Product | #opentowork",
+   "raw": "Dir. of product | We're hiring 🚀",
    "canonical": "Director of Product",
    "ops": [
+    "case-mangle",
+    "abbreviation",
     "appended-junk"
    ],
    "gold": {
@@ -30213,11 +29770,39 @@
    }
   },
   {
-   "raw": "Dir.   Product, EMEA",
+   "raw": "dir. of product",
+   "canonical": "Director of Product",
+   "ops": [
+    "abbreviation",
+    "case-mangle"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director - Product, DACH",
    "canonical": "Director of Product",
    "ops": [
     "separator-variant",
-    "abbreviation",
+    "whitespace-slip",
     "region-suffix"
    ],
    "gold": {
@@ -30242,11 +29827,9 @@
    }
   },
   {
-   "raw": "Dir. - Product",
+   "raw": "Director   Product",
    "canonical": "Director of Product",
    "ops": [
-    "abbreviation",
-    "punctuation-swap",
     "separator-variant"
    ],
    "gold": {
@@ -30271,9 +29854,92 @@
    }
   },
   {
-   "raw": "Director of Product, CPA",
+   "raw": "Director - Product",
    "canonical": "Director of Product",
    "ops": [
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director, Product",
+   "canonical": "Director of Product",
+   "ops": [
+    "punctuation-swap"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Dir. - Product",
+   "canonical": "Director of Product",
+   "ops": [
+    "abbreviation",
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director, Product, CFA",
+   "canonical": "Director of Product",
+   "ops": [
+    "punctuation-swap",
     "credential-suffix"
    ],
    "gold": {
@@ -30298,37 +29964,10 @@
    }
   },
   {
-   "raw": "Director of Product, APAC",
+   "raw": "Director, – Product",
    "canonical": "Director of Product",
    "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Dir., Product",
-   "canonical": "Director of Product",
-   "ops": [
-    "abbreviation",
+    "separator-variant",
     "punctuation-swap"
    ],
    "gold": {
@@ -30380,9 +30019,10 @@
    }
   },
   {
-   "raw": "Director of Product | ex-Contoso",
+   "raw": "Dir. of Product | #opentowork",
    "canonical": "Director of Product",
    "ops": [
+    "abbreviation",
     "appended-junk"
    ],
    "gold": {
@@ -30407,66 +30047,10 @@
    }
   },
   {
-   "raw": "Director – Product, ANZ",
-   "canonical": "Director of Product",
-   "ops": [
-    "separator-variant",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Director of product, MBA | We're hiring 🚀",
+   "raw": "Director product",
    "canonical": "Director of Product",
    "ops": [
     "case-mangle",
-    "credential-suffix",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Director, Product",
-   "canonical": "Director of Product",
-   "ops": [
     "punctuation-swap"
    ],
    "gold": {
@@ -30486,6 +30070,33 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director of Product, UK",
+   "canonical": "Director of Product",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -30516,11 +30127,11 @@
    }
   },
   {
-   "raw": "Vice president of product",
+   "raw": "Vice President of Product, APAC",
    "canonical": "VP of Product",
    "ops": [
     "abbreviation",
-    "case-mangle"
+    "region-suffix"
    ],
    "gold": {
     "function": {
@@ -30538,16 +30149,15 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
   },
   {
-   "raw": "VP OF PRODUCT, PMP",
+   "raw": "VP of Product, PhD",
    "canonical": "VP of Product",
    "ops": [
-    "case-mangle",
     "credential-suffix"
    ],
    "gold": {
@@ -30572,10 +30182,10 @@
    }
   },
   {
-   "raw": "VP of Product @ Northwind Traders",
+   "raw": "VP   Product",
    "canonical": "VP of Product",
    "ops": [
-    "appended-junk"
+    "separator-variant"
    ],
    "gold": {
     "function": {
@@ -30599,10 +30209,38 @@
    }
   },
   {
-   "raw": "VP of Product | #opentowork, PhD",
+   "raw": "VP of Product | ex-Contoso, APAC",
    "canonical": "VP of Product",
    "ops": [
     "appended-junk",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "VP"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "VP of Product, Benelux, CPA",
+   "canonical": "VP of Product",
+   "ops": [
+    "region-suffix",
     "credential-suffix"
    ],
    "gold": {
@@ -30621,17 +30259,16 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
   },
   {
-   "raw": "Vp of product | #opentowork",
+   "raw": "VP of Product, EMEA",
    "canonical": "VP of Product",
    "ops": [
-    "case-mangle",
-    "appended-junk"
+    "region-suffix"
    ],
    "gold": {
     "function": {
@@ -30649,36 +30286,7 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "  VP OF PRODUCT  @ Northwind Traders",
-   "canonical": "VP of Product",
-   "ops": [
-    "whitespace-slip",
-    "case-mangle",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "VP"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
+      "Regional"
      ]
     }
    }
@@ -30711,12 +30319,12 @@
    }
   },
   {
-   "raw": "Vp , product",
+   "raw": "VP,   Product, MBA",
    "canonical": "VP of Product",
    "ops": [
-    "case-mangle",
-    "whitespace-slip",
-    "punctuation-swap"
+    "separator-variant",
+    "punctuation-swap",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -30735,6 +30343,90 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Vice President of Product, LATAM",
+   "canonical": "VP of Product",
+   "ops": [
+    "abbreviation",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "VP"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Vice President of Product",
+   "canonical": "VP of Product",
+   "ops": [
+    "abbreviation"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "VP"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "VP OF, PRODUCT, APAC",
+   "canonical": "VP of Product",
+   "ops": [
+    "case-mangle",
+    "punctuation-swap",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "VP"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -30765,38 +30457,10 @@
    }
   },
   {
-   "raw": "Chief, Product Officer",
-   "canonical": "Chief Product Officer",
-   "ops": [
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Chief Product ,  Officer, ANZ",
+   "raw": "Chief   Product Officer, APAC",
    "canonical": "Chief Product Officer",
    "ops": [
     "separator-variant",
-    "punctuation-swap",
     "region-suffix"
    ],
    "gold": {
@@ -30816,90 +30480,6 @@
      "kind": "labelled",
      "values": [
       "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Chief Product Officer, PhD",
-   "canonical": "Chief Product Officer",
-   "ops": [
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "CHIEF PRODUCT, OFFICER, PhD",
-   "canonical": "Chief Product Officer",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Chief   Product Officer, PhD",
-   "canonical": "Chief Product Officer",
-   "ops": [
-    "separator-variant",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
      ]
     }
    }
@@ -30932,10 +30512,10 @@
    }
   },
   {
-   "raw": "Chief Product Officer @ Northwind Traders",
+   "raw": "Chief – Product Officer",
    "canonical": "Chief Product Officer",
    "ops": [
-    "appended-junk"
+    "separator-variant"
    ],
    "gold": {
     "function": {
@@ -30959,38 +30539,9 @@
    }
   },
   {
-   "raw": "Chief ,  Product Officer",
+   "raw": "Chief Product Officer, UK",
    "canonical": "Chief Product Officer",
    "ops": [
-    "separator-variant",
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Product"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Chief Product Officer, CFA, APAC",
-   "canonical": "Chief Product Officer",
-   "ops": [
-    "credential-suffix",
     "region-suffix"
    ],
    "gold": {
@@ -31015,9 +30566,68 @@
    }
   },
   {
-   "raw": "Chief Product Officer, DACH",
+   "raw": "Chief product, officer, PhD",
    "canonical": "Chief Product Officer",
    "ops": [
+    "case-mangle",
+    "punctuation-swap",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "CHIEF  PRODUCT OFFICER",
+   "canonical": "Chief Product Officer",
+   "ops": [
+    "case-mangle",
+    "whitespace-slip"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Product"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "CHIEF  PRODUCT OFFICER, DACH",
+   "canonical": "Chief Product Officer",
+   "ops": [
+    "whitespace-slip",
+    "case-mangle",
     "region-suffix"
    ],
    "gold": {
@@ -31099,10 +30709,10 @@
    }
   },
   {
-   "raw": "Chief   Product Officer",
+   "raw": "Chief, Product Officer",
    "canonical": "Chief Product Officer",
    "ops": [
-    "separator-variant"
+    "punctuation-swap"
    ],
    "gold": {
     "function": {
@@ -31129,6 +30739,33 @@
    "raw": "Design Intern",
    "canonical": "Design Intern",
    "ops": [],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Design"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Intern"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Design   Intern",
+   "canonical": "Design Intern",
+   "ops": [
+    "separator-variant"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -31571,11 +31208,9 @@
    }
   },
   {
-   "raw": "Design Intern | #opentowork",
-   "canonical": "Design Intern",
-   "ops": [
-    "appended-junk"
-   ],
+   "raw": "Product Designer",
+   "canonical": "Product Designer",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -31586,7 +31221,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "Intern"
+      "IC"
      ]
     },
     "scope": {
@@ -31598,9 +31233,11 @@
    }
   },
   {
-   "raw": "Product Designer",
+   "raw": "Product Designer | #opentowork",
    "canonical": "Product Designer",
-   "ops": [],
+   "ops": [
+    "appended-junk"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -31872,6 +31509,33 @@
    }
   },
   {
+   "raw": "Sr. Product Designer",
+   "canonical": "Senior Product Designer",
+   "ops": [
+    "abbreviation"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Design"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
    "raw": "Senior Product Designer | ex-Contoso",
    "canonical": "Senior Product Designer",
    "ops": [
@@ -31904,34 +31568,6 @@
    "ops": [
     "separator-variant",
     "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Design"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Sr. Product Designer",
-   "canonical": "Senior Product Designer",
-   "ops": [
-    "abbreviation",
-    "whitespace-slip"
    ],
    "gold": {
     "function": {
@@ -32204,11 +31840,9 @@
    }
   },
   {
-   "raw": "Senior Product Designer | #opentowork",
-   "canonical": "Senior Product Designer",
-   "ops": [
-    "appended-junk"
-   ],
+   "raw": "UX Designer",
+   "canonical": "UX Designer",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -32219,7 +31853,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "SeniorIC"
+      "IC"
      ]
     },
     "scope": {
@@ -32231,9 +31865,11 @@
    }
   },
   {
-   "raw": "UX Designer",
+   "raw": "UX Designer | #opentowork",
    "canonical": "UX Designer",
-   "ops": [],
+   "ops": [
+    "appended-junk"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -32590,12 +32226,9 @@
    }
   },
   {
-   "raw": "UX, Designer, MBA",
-   "canonical": "UX Designer",
-   "ops": [
-    "punctuation-swap",
-    "credential-suffix"
-   ],
+   "raw": "UX Researcher",
+   "canonical": "UX Researcher",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -32618,9 +32251,12 @@
    }
   },
   {
-   "raw": "UX Researcher",
+   "raw": "UX, Researcher, MBA",
    "canonical": "UX Researcher",
-   "ops": [],
+   "ops": [
+    "punctuation-swap",
+    "credential-suffix"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -32941,6 +32577,34 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Design manager, APAC",
+   "canonical": "Design Manager",
+   "ops": [
+    "case-mangle",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Design"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -33696,8 +33360,33 @@
    }
   },
   {
-   "raw": "Creative director, EMEA, CFA",
-   "canonical": "Creative Director",
+   "raw": "Director of Design",
+   "canonical": "Director of Design",
+   "ops": [],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Design"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director of design, EMEA, CFA",
+   "canonical": "Director of Design",
    "ops": [
     "case-mangle",
     "region-suffix",
@@ -33720,31 +33409,6 @@
      "kind": "labelled",
      "values": [
       "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Director of Design",
-   "canonical": "Director of Design",
-   "ops": [],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Design"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
      ]
     }
    }
@@ -34228,12 +33892,9 @@
    }
   },
   {
-   "raw": "Director of design 🚀🚀",
-   "canonical": "Director of Design",
-   "ops": [
-    "case-mangle",
-    "appended-junk"
-   ],
+   "raw": "VP of Design",
+   "canonical": "VP of Design",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -34244,7 +33905,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "Director"
+      "VP"
      ]
     },
     "scope": {
@@ -34256,9 +33917,12 @@
    }
   },
   {
-   "raw": "VP of Design",
+   "raw": "Vp of design 🚀🚀",
    "canonical": "VP of Design",
-   "ops": [],
+   "ops": [
+    "case-mangle",
+    "appended-junk"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -34615,22 +34279,20 @@
    }
   },
   {
-   "raw": "VP of Design, CFA",
-   "canonical": "VP of Design",
-   "ops": [
-    "credential-suffix"
-   ],
+   "raw": "Data Analyst",
+   "canonical": "Data Analyst",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
      "values": [
-      "Design"
+      "Data"
      ]
     },
     "seniority": {
      "kind": "labelled",
      "values": [
-      "VP"
+      "IC"
      ]
     },
     "scope": {
@@ -34642,9 +34304,11 @@
    }
   },
   {
-   "raw": "Data Analyst",
+   "raw": "Data Analyst, CFA",
    "canonical": "Data Analyst",
-   "ops": [],
+   "ops": [
+    "credential-suffix"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -35090,12 +34754,9 @@
    }
   },
   {
-   "raw": "DATA ANALYST, MBA",
-   "canonical": "Data Analyst",
-   "ops": [
-    "case-mangle",
-    "credential-suffix"
-   ],
+   "raw": "Senior Data Analyst",
+   "canonical": "Senior Data Analyst",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -35106,7 +34767,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "IC"
+      "SeniorIC"
      ]
     },
     "scope": {
@@ -35118,9 +34779,12 @@
    }
   },
   {
-   "raw": "Senior Data Analyst",
+   "raw": "SENIOR DATA ANALYST, MBA",
    "canonical": "Senior Data Analyst",
-   "ops": [],
+   "ops": [
+    "case-mangle",
+    "credential-suffix"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -35370,33 +35034,6 @@
    }
   },
   {
-   "raw": "Senior Data Analyst, MBA",
-   "canonical": "Senior Data Analyst",
-   "ops": [
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Data"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Senior Data Analyst, DACH",
    "canonical": "Senior Data Analyst",
    "ops": [
@@ -35622,12 +35259,9 @@
    }
   },
   {
-   "raw": "senior, data analyst",
-   "canonical": "Senior Data Analyst",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap"
-   ],
+   "raw": "Business Intelligence Analyst",
+   "canonical": "Business Intelligence Analyst",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -35638,7 +35272,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "SeniorIC"
+      "IC"
      ]
     },
     "scope": {
@@ -35650,9 +35284,12 @@
    }
   },
   {
-   "raw": "Business Intelligence Analyst",
+   "raw": "business, intelligence analyst",
    "canonical": "Business Intelligence Analyst",
-   "ops": [],
+   "ops": [
+    "case-mangle",
+    "punctuation-swap"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -35985,11 +35622,9 @@
    }
   },
   {
-   "raw": "Business   Intelligence Analyst",
-   "canonical": "Business Intelligence Analyst",
-   "ops": [
-    "separator-variant"
-   ],
+   "raw": "Data Scientist",
+   "canonical": "Data Scientist",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -36012,9 +35647,12 @@
    }
   },
   {
-   "raw": "Data Scientist",
+   "raw": "Scientist (Data)",
    "canonical": "Data Scientist",
-   "ops": [],
+   "ops": [
+    "separator-variant",
+    "parenthetical-department"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -36043,33 +35681,6 @@
     "case-mangle",
     "department-prefix",
     "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Data"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Scientist (Data)",
-   "canonical": "Data Scientist",
-   "ops": [
-    "parenthetical-department"
    ],
    "gold": {
     "function": {
@@ -36484,34 +36095,6 @@
    }
   },
   {
-   "raw": "Data Scientist, DACH, PhD",
-   "canonical": "Data Scientist",
-   "ops": [
-    "region-suffix",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Data"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Senior Data Scientist",
    "canonical": "Senior Data Scientist",
    "ops": [],
@@ -36532,6 +36115,35 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Sr. Data Scientist, DACH, PhD",
+   "canonical": "Senior Data Scientist",
+   "ops": [
+    "abbreviation",
+    "region-suffix",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Data"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -37317,6 +36929,33 @@
    }
   },
   {
+   "raw": "Data, Science Manager",
+   "canonical": "Data Science Manager",
+   "ops": [
+    "punctuation-swap"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Data"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
    "raw": "Data - Science Manager, PhD",
    "canonical": "Data Science Manager",
    "ops": [
@@ -37708,34 +37347,6 @@
    }
   },
   {
-   "raw": "data science manager, Nordics",
-   "canonical": "Data Science Manager",
-   "ops": [
-    "case-mangle",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Data"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Director of Analytics",
    "canonical": "Director of Analytics",
    "ops": [],
@@ -37756,6 +37367,34 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "director of analytics, Nordics",
+   "canonical": "Director of Analytics",
+   "ops": [
+    "case-mangle",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Data"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -38068,11 +37707,9 @@
    }
   },
   {
-   "raw": "Director of Analytics | We're hiring 🚀",
-   "canonical": "Director of Analytics",
-   "ops": [
-    "appended-junk"
-   ],
+   "raw": "VP of Data",
+   "canonical": "VP of Data",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -38083,7 +37720,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "Director"
+      "VP"
      ]
     },
     "scope": {
@@ -38095,9 +37732,11 @@
    }
   },
   {
-   "raw": "VP of Data",
+   "raw": "VP of Data | We're hiring 🚀",
    "canonical": "VP of Data",
-   "ops": [],
+   "ops": [
+    "appended-junk"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -38320,34 +37959,6 @@
     "whitespace-slip",
     "separator-variant",
     "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Data"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "VP"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "VP of Data | We're hiring 🚀",
-   "canonical": "VP of Data",
-   "ops": [
-    "whitespace-slip",
-    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -38954,34 +38565,6 @@
    }
   },
   {
-   "raw": "Finance - Intern (Finance)",
-   "canonical": "Finance Intern",
-   "ops": [
-    "parenthetical-department",
-    "department-prefix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Finance"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Intern"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Staff Accountant",
    "canonical": "Staff Accountant",
    "ops": [],
@@ -39552,13 +39135,9 @@
    }
   },
   {
-   "raw": "Financial –, Analyst, PMP",
-   "canonical": "Financial Analyst",
-   "ops": [
-    "separator-variant",
-    "punctuation-swap",
-    "credential-suffix"
-   ],
+   "raw": "Senior Financial Analyst",
+   "canonical": "Senior Financial Analyst",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -39569,7 +39148,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "IC"
+      "SeniorIC"
      ]
     },
     "scope": {
@@ -39581,9 +39160,13 @@
    }
   },
   {
-   "raw": "Senior Financial Analyst",
+   "raw": "Senior –, Financial Analyst, PMP",
    "canonical": "Senior Financial Analyst",
-   "ops": [],
+   "ops": [
+    "separator-variant",
+    "punctuation-swap",
+    "credential-suffix"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -40241,12 +39824,9 @@
    }
   },
   {
-   "raw": "Accounting Manager | ex-Contoso, MBA",
-   "canonical": "Accounting Manager",
-   "ops": [
-    "appended-junk",
-    "credential-suffix"
-   ],
+   "raw": "Finance Manager",
+   "canonical": "Finance Manager",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -40269,9 +39849,13 @@
    }
   },
   {
-   "raw": "Finance Manager",
+   "raw": "Manager (Finance) | ex-Contoso, MBA",
    "canonical": "Finance Manager",
-   "ops": [],
+   "ops": [
+    "parenthetical-department",
+    "appended-junk",
+    "credential-suffix"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -40658,33 +40242,6 @@
    }
   },
   {
-   "raw": "Finance Manager, Nordics",
-   "canonical": "Finance Manager",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Finance"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Procurement Manager",
    "canonical": "Procurement Manager",
    "ops": [],
@@ -40705,6 +40262,33 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Procurement Manager, Nordics",
+   "canonical": "Procurement Manager",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Finance"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -42466,22 +42050,20 @@
    }
   },
   {
-   "raw": "Chief Financial – Officer",
-   "canonical": "Chief Financial Officer",
-   "ops": [
-    "separator-variant"
-   ],
+   "raw": "Recruiting Coordinator",
+   "canonical": "Recruiting Coordinator",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
      "values": [
-      "Finance"
+      "HR"
      ]
     },
     "seniority": {
      "kind": "labelled",
      "values": [
-      "CSuite"
+      "IC"
      ]
     },
     "scope": {
@@ -42493,9 +42075,11 @@
    }
   },
   {
-   "raw": "Recruiting Coordinator",
+   "raw": "Recruiting – Coordinator",
    "canonical": "Recruiting Coordinator",
-   "ops": [],
+   "ops": [
+    "separator-variant"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -42688,33 +42272,6 @@
    }
   },
   {
-   "raw": "Recruiting – Coordinator",
-   "canonical": "Recruiting Coordinator",
-   "ops": [
-    "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "HR"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Recruiting   Coordinator",
    "canonical": "Recruiting Coordinator",
    "ops": [
@@ -42824,11 +42381,9 @@
    }
   },
   {
-   "raw": "Recruiting Coordinator, CFA",
-   "canonical": "Recruiting Coordinator",
-   "ops": [
-    "credential-suffix"
-   ],
+   "raw": "Technical Recruiter",
+   "canonical": "Technical Recruiter",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -42851,9 +42406,11 @@
    }
   },
   {
-   "raw": "Technical Recruiter",
+   "raw": "Technical Recruiter, CFA",
    "canonical": "Technical Recruiter",
-   "ops": [],
+   "ops": [
+    "credential-suffix"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -43300,12 +42857,9 @@
    }
   },
   {
-   "raw": "Technical - Recruiter | We're hiring 🚀",
-   "canonical": "Technical Recruiter",
-   "ops": [
-    "separator-variant",
-    "appended-junk"
-   ],
+   "raw": "Talent Acquisition Specialist",
+   "canonical": "Talent Acquisition Specialist",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -43328,9 +42882,12 @@
    }
   },
   {
-   "raw": "Talent Acquisition Specialist",
+   "raw": "Talent - Acquisition Specialist | We're hiring 🚀",
    "canonical": "Talent Acquisition Specialist",
-   "ops": [],
+   "ops": [
+    "separator-variant",
+    "appended-junk"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -43800,12 +43357,9 @@
    }
   },
   {
-   "raw": "talent, acquisition specialist",
-   "canonical": "Talent Acquisition Specialist",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap"
-   ],
+   "raw": "HR Manager",
+   "canonical": "HR Manager",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -43816,7 +43370,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "IC"
+      "Manager"
      ]
     },
     "scope": {
@@ -43828,9 +43382,13 @@
    }
   },
   {
-   "raw": "HR Manager",
+   "raw": "hr, - hr manager",
    "canonical": "HR Manager",
-   "ops": [],
+   "ops": [
+    "department-prefix",
+    "case-mangle",
+    "punctuation-swap"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -44215,8 +43773,33 @@
    }
   },
   {
-   "raw": "HR MANAGER | Acme Corp, EMEA",
-   "canonical": "HR Manager",
+   "raw": "People Operations Manager",
+   "canonical": "People Operations Manager",
+   "ops": [],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "HR"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "PEOPLE OPERATIONS MANAGER | Acme Corp, EMEA",
+   "canonical": "People Operations Manager",
    "ops": [
     "case-mangle",
     "appended-junk",
@@ -44239,31 +43822,6 @@
      "kind": "labelled",
      "values": [
       "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "People Operations Manager",
-   "canonical": "People Operations Manager",
-   "ops": [],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "HR"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
      ]
     }
    }
@@ -45071,35 +44629,6 @@
    }
   },
   {
-   "raw": "Human Resources Manager, US @ Northwind Traders",
-   "canonical": "Human Resources Manager",
-   "ops": [
-    "whitespace-slip",
-    "region-suffix",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "HR"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Director of Talent",
    "canonical": "Director of Talent",
    "ops": [],
@@ -45120,6 +44649,35 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director of Talent, US @ Northwind Traders",
+   "canonical": "Director of Talent",
+   "ops": [
+    "whitespace-slip",
+    "region-suffix",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "HR"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -45542,12 +45100,9 @@
    }
   },
   {
-   "raw": "Dir. - Talent",
-   "canonical": "Director of Talent",
-   "ops": [
-    "abbreviation",
-    "separator-variant"
-   ],
+   "raw": "VP of People",
+   "canonical": "VP of People",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -45558,7 +45113,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "Director"
+      "VP"
      ]
     },
     "scope": {
@@ -45570,9 +45125,12 @@
    }
   },
   {
-   "raw": "VP of People",
+   "raw": "Vice President - People",
    "canonical": "VP of People",
-   "ops": [],
+   "ops": [
+    "abbreviation",
+    "separator-variant"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -45930,34 +45488,6 @@
    }
   },
   {
-   "raw": "Vice President of People, UK",
-   "canonical": "VP of People",
-   "ops": [
-    "abbreviation",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "HR"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "VP"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Chief Human Resources Officer",
    "canonical": "Chief Human Resources Officer",
    "ops": [],
@@ -45978,6 +45508,34 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Chief HR Officer, UK",
+   "canonical": "Chief Human Resources Officer",
+   "ops": [
+    "abbreviation",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "HR"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -46754,11 +46312,11 @@
    }
   },
   {
-   "raw": "Legal   Counsel, MBA",
+   "raw": "  Legal, Counsel ",
    "canonical": "Legal Counsel",
    "ops": [
-    "separator-variant",
-    "credential-suffix"
+    "punctuation-swap",
+    "whitespace-slip"
    ],
    "gold": {
     "function": {
@@ -46782,11 +46340,65 @@
    }
   },
   {
-   "raw": "Legal, - Counsel | ex-Contoso",
+   "raw": "Legal - Counsel, EMEA",
    "canonical": "Legal Counsel",
    "ops": [
     "separator-variant",
-    "punctuation-swap",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal Counsel, PhD, ANZ",
+   "canonical": "Legal Counsel",
+   "ops": [
+    "credential-suffix",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal Counsel | #opentowork",
+   "canonical": "Legal Counsel",
+   "ops": [
     "appended-junk"
    ],
    "gold": {
@@ -46811,38 +46423,10 @@
    }
   },
   {
-   "raw": "Legal - Counsel, US",
+   "raw": "Legal Counsel, PhD",
    "canonical": "Legal Counsel",
    "ops": [
-    "separator-variant",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal   Counsel",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "separator-variant"
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -46866,94 +46450,67 @@
    }
   },
   {
-   "raw": "Counsel  (Legal), EMEA",
+   "raw": "Legal - Legal counsel | We're hiring 🚀",
+   "canonical": "Legal Counsel",
+   "ops": [
+    "case-mangle",
+    "department-prefix",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal Counsel | Acme Corp",
+   "canonical": "Legal Counsel",
+   "ops": [
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Counsel (Legal) | Acme Corp",
    "canonical": "Legal Counsel",
    "ops": [
     "parenthetical-department",
-    "whitespace-slip",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal Counsel, ANZ",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal Counsel, LATAM",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal, - Legal Counsel",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "department-prefix",
-    "punctuation-swap"
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -46977,11 +46534,125 @@
    }
   },
   {
-   "raw": "Legal – Counsel, PMP",
+   "raw": "Legal counsel | ex-Contoso",
+   "canonical": "Legal Counsel",
+   "ops": [
+    "case-mangle",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal Counsel @ Northwind Traders, ANZ",
+   "canonical": "Legal Counsel",
+   "ops": [
+    "appended-junk",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "legal   counsel, MBA",
    "canonical": "Legal Counsel",
    "ops": [
     "separator-variant",
+    "case-mangle",
     "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "LEGAL, COUNSEL, APAC",
+   "canonical": "Legal Counsel",
+   "ops": [
+    "case-mangle",
+    "punctuation-swap",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "LEGAL   COUNSEL",
+   "canonical": "Legal Counsel",
+   "ops": [
+    "case-mangle",
+    "separator-variant"
    ],
    "gold": {
     "function": {
@@ -47008,7 +46679,6 @@
    "raw": "Counsel (Legal)",
    "canonical": "Legal Counsel",
    "ops": [
-    "separator-variant",
     "parenthetical-department"
    ],
    "gold": {
@@ -47028,173 +46698,6 @@
      "kind": "labelled",
      "values": [
       "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal – Counsel, PhD",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "separator-variant",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal  Counsel, ANZ",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "whitespace-slip",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "LEGAL COUNSEL, DACH",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "case-mangle",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal Counsel, APAC",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "LEGAL COUNSEL | ex-Contoso",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "case-mangle",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal, Counsel, Benelux",
-   "canonical": "Legal Counsel",
-   "ops": [
-    "punctuation-swap",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
      ]
     }
    }
@@ -47225,63 +46728,7 @@
    }
   },
   {
-   "raw": "Sr. Legal Counsel, MBA",
-   "canonical": "Senior Legal Counsel",
-   "ops": [
-    "abbreviation",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Senior    Legal Counsel",
-   "canonical": "Senior Legal Counsel",
-   "ops": [
-    "separator-variant",
-    "whitespace-slip"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Senior Legal Counsel, UK",
+   "raw": "Senior Legal Counsel, Nordics",
    "canonical": "Senior Legal Counsel",
    "ops": [
     "region-suffix"
@@ -47308,12 +46755,11 @@
    }
   },
   {
-   "raw": "Sr. Legal   Counsel, PhD",
+   "raw": "Sr.  Legal Counsel",
    "canonical": "Senior Legal Counsel",
    "ops": [
     "abbreviation",
-    "separator-variant",
-    "credential-suffix"
+    "whitespace-slip"
    ],
    "gold": {
     "function": {
@@ -47337,9 +46783,39 @@
    }
   },
   {
-   "raw": "Senior Legal Counsel | ex-Contoso",
+   "raw": "SENIOR  LEGAL COUNSEL",
    "canonical": "Senior Legal Counsel",
    "ops": [
+    "case-mangle",
+    "whitespace-slip"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Senior   Legal, Counsel | Acme Corp",
+   "canonical": "Senior Legal Counsel",
+   "ops": [
+    "punctuation-swap",
+    "separator-variant",
     "appended-junk"
    ],
    "gold": {
@@ -47364,11 +46840,11 @@
    }
   },
   {
-   "raw": "Senior, legal counsel",
+   "raw": "Sr. Legal Counsel @ Northwind Traders",
    "canonical": "Senior Legal Counsel",
    "ops": [
-    "case-mangle",
-    "punctuation-swap"
+    "abbreviation",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -47392,65 +46868,11 @@
    }
   },
   {
-   "raw": "Senior  Legal Counsel",
+   "raw": "Sr. Legal Counsel, APAC, CFA",
    "canonical": "Senior Legal Counsel",
    "ops": [
-    "whitespace-slip"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Senior Legal Counsel, CPA, ANZ",
-   "canonical": "Senior Legal Counsel",
-   "ops": [
-    "credential-suffix",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Senior   Legal Counsel, MBA",
-   "canonical": "Senior Legal Counsel",
-   "ops": [
-    "separator-variant",
+    "abbreviation",
+    "region-suffix",
     "credential-suffix"
    ],
    "gold": {
@@ -47469,45 +46891,15 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "senior legal, counsel, EMEA",
-   "canonical": "Senior Legal Counsel",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
       "Regional"
      ]
     }
    }
   },
   {
-   "raw": "Sr., Legal Counsel",
+   "raw": "Sr. Legal Counsel",
    "canonical": "Senior Legal Counsel",
    "ops": [
-    "punctuation-swap",
     "abbreviation"
    ],
    "gold": {
@@ -47532,10 +46924,38 @@
    }
   },
   {
-   "raw": "Senior - Legal Counsel",
+   "raw": "Sr. Legal Counsel, APAC",
    "canonical": "Senior Legal Counsel",
    "ops": [
-    "separator-variant"
+    "abbreviation",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Senior Legal Counsel, CPA",
+   "canonical": "Senior Legal Counsel",
+   "ops": [
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -47559,38 +46979,179 @@
    }
   },
   {
-   "raw": "Senior Legal   Counsel",
-   "canonical": "Senior Legal Counsel",
-   "ops": [
-    "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "senior legal counsel, PMP",
+   "raw": "Senior legal counsel, PhD",
    "canonical": "Senior Legal Counsel",
    "ops": [
     "case-mangle",
     "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Sr. Legal - Counsel",
+   "canonical": "Senior Legal Counsel",
+   "ops": [
+    "abbreviation",
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Senior Legal Counsel, Benelux | We're hiring 🚀",
+   "canonical": "Senior Legal Counsel",
+   "ops": [
+    "region-suffix",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Senior Legal Counsel, PMP",
+   "canonical": "Senior Legal Counsel",
+   "ops": [
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "  Sr. Legal Counsel  | We're hiring 🚀",
+   "canonical": "Senior Legal Counsel",
+   "ops": [
+    "abbreviation",
+    "whitespace-slip",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Sr. Legal Counsel, US",
+   "canonical": "Senior Legal Counsel",
+   "ops": [
+    "abbreviation",
+    "whitespace-slip",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Senior Legal Counsel | ex-Contoso",
+   "canonical": "Senior Legal Counsel",
+   "ops": [
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -47639,11 +47200,12 @@
    }
   },
   {
-   "raw": "Compliance  - Manager",
+   "raw": "Compliance Mgr., APAC @ Northwind Traders",
    "canonical": "Compliance Manager",
    "ops": [
-    "whitespace-slip",
-    "separator-variant"
+    "abbreviation",
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -47661,15 +47223,17 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
   },
   {
-   "raw": "Compliance Manager, Nordics",
+   "raw": "Compliance - Manager, CFA, Benelux",
    "canonical": "Compliance Manager",
    "ops": [
+    "separator-variant",
+    "credential-suffix",
     "region-suffix"
    ],
    "gold": {
@@ -47721,9 +47285,148 @@
    }
   },
   {
-   "raw": "Compliance Manager, US",
+   "raw": "Compliance, Manager | Acme Corp",
    "canonical": "Compliance Manager",
    "ops": [
+    "punctuation-swap",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Compliance manager, PMP",
+   "canonical": "Compliance Manager",
+   "ops": [
+    "case-mangle",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Compliance Manager, CPA",
+   "canonical": "Compliance Manager",
+   "ops": [
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Compliance Manager, EMEA",
+   "canonical": "Compliance Manager",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Compliance Mgr. | ex-Contoso",
+   "canonical": "Compliance Manager",
+   "ops": [
+    "abbreviation",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Compliance, Manager, EMEA",
+   "canonical": "Compliance Manager",
+   "ops": [
+    "punctuation-swap",
     "region-suffix"
    ],
    "gold": {
@@ -47751,8 +47454,7 @@
    "raw": "Compliance Mgr.",
    "canonical": "Compliance Manager",
    "ops": [
-    "abbreviation",
-    "whitespace-slip"
+    "abbreviation"
    ],
    "gold": {
     "function": {
@@ -47776,37 +47478,11 @@
    }
   },
   {
-   "raw": "Compliance - Mgr.",
+   "raw": "Compliance  Mgr. @ Northwind Traders",
    "canonical": "Compliance Manager",
    "ops": [
+    "whitespace-slip",
     "abbreviation",
-    "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Compliance Manager | ex-Contoso",
-   "canonical": "Compliance Manager",
-   "ops": [
     "appended-junk"
    ],
    "gold": {
@@ -47831,69 +47507,40 @@
    }
   },
   {
-   "raw": "COMPLIANCE, MANAGER, CPA",
+   "raw": "  Compliance Manager , Nordics",
    "canonical": "Compliance Manager",
    "ops": [
-    "case-mangle",
+    "whitespace-slip",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "COMPLIANCE, MGR.",
+   "canonical": "Compliance Manager",
+   "ops": [
+    "abbreviation",
     "punctuation-swap",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Compliance - Manager, CFA",
-   "canonical": "Compliance Manager",
-   "ops": [
-    "separator-variant",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "COMPLIANCE MGR. @ Northwind Traders",
-   "canonical": "Compliance Manager",
-   "ops": [
-    "abbreviation",
-    "case-mangle",
-    "appended-junk"
+    "case-mangle"
    ],
    "gold": {
     "function": {
@@ -47944,63 +47591,6 @@
    }
   },
   {
-   "raw": "compliance, mgr.",
-   "canonical": "Compliance Manager",
-   "ops": [
-    "punctuation-swap",
-    "abbreviation",
-    "case-mangle"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Compliance Mgr. | #opentowork",
-   "canonical": "Compliance Manager",
-   "ops": [
-    "abbreviation",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Legal Director",
    "canonical": "Legal Director",
    "ops": [],
@@ -48026,67 +47616,10 @@
    }
   },
   {
-   "raw": "Legal    Director",
+   "raw": "legal director, US",
    "canonical": "Legal Director",
    "ops": [
-    "separator-variant",
-    "whitespace-slip"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal - Director",
-   "canonical": "Legal Director",
-   "ops": [
-    "separator-variant",
-    "whitespace-slip"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Director, (Legal), LATAM",
-   "canonical": "Legal Director",
-   "ops": [
-    "parenthetical-department",
-    "punctuation-swap",
+    "case-mangle",
     "region-suffix"
    ],
    "gold": {
@@ -48106,6 +47639,227 @@
      "kind": "labelled",
      "values": [
       "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal Director, CPA",
+   "canonical": "Legal Director",
+   "ops": [
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal Director, APAC",
+   "canonical": "Legal Director",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal – Director",
+   "canonical": "Legal Director",
+   "ops": [
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "legal, director",
+   "canonical": "Legal Director",
+   "ops": [
+    "case-mangle",
+    "punctuation-swap"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal -   Legal Director ",
+   "canonical": "Legal Director",
+   "ops": [
+    "whitespace-slip",
+    "department-prefix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director (Legal) | ex-Contoso",
+   "canonical": "Legal Director",
+   "ops": [
+    "parenthetical-department",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal -   Legal Director , DACH",
+   "canonical": "Legal Director",
+   "ops": [
+    "whitespace-slip",
+    "department-prefix",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal - Legal Director",
+   "canonical": "Legal Director",
+   "ops": [
+    "department-prefix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
      ]
     }
    }
@@ -48138,12 +47892,39 @@
    }
   },
   {
-   "raw": "Legal - Legal Dir., CFA",
+   "raw": "Legal - Director",
    "canonical": "Legal Director",
    "ops": [
-    "department-prefix",
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Legal Dir., Nordics | We're hiring 🚀",
+   "canonical": "Legal Director",
+   "ops": [
     "abbreviation",
-    "credential-suffix"
+    "region-suffix",
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -48161,44 +47942,16 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
   },
   {
-   "raw": "Legal, Director",
+   "raw": "Legal Director @ Northwind Traders",
    "canonical": "Legal Director",
    "ops": [
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal - Legal Director, CPA",
-   "canonical": "Legal Director",
-   "ops": [
-    "department-prefix",
-    "credential-suffix"
+    "appended-junk"
    ],
    "gold": {
     "function": {
@@ -48249,260 +48002,6 @@
    }
   },
   {
-   "raw": "  LEGAL DIRECTOR , MBA",
-   "canonical": "Legal Director",
-   "ops": [
-    "whitespace-slip",
-    "case-mangle",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal  Director",
-   "canonical": "Legal Director",
-   "ops": [
-    "whitespace-slip"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal, - Director, DACH",
-   "canonical": "Legal Director",
-   "ops": [
-    "separator-variant",
-    "punctuation-swap",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal Director | We're hiring 🚀",
-   "canonical": "Legal Director",
-   "ops": [
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "  LEGAL DIRECTOR  | We're hiring 🚀",
-   "canonical": "Legal Director",
-   "ops": [
-    "case-mangle",
-    "whitespace-slip",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "legal director, LATAM",
-   "canonical": "Legal Director",
-   "ops": [
-    "case-mangle",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "  Legal Director  @ Northwind Traders",
-   "canonical": "Legal Director",
-   "ops": [
-    "whitespace-slip",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "legal - legal director, ANZ",
-   "canonical": "Legal Director",
-   "ops": [
-    "department-prefix",
-    "case-mangle",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Legal, Dir.",
-   "canonical": "Legal Director",
-   "ops": [
-    "abbreviation",
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
    "raw": "General Counsel",
    "canonical": "General Counsel",
    "ops": [],
@@ -48528,7 +48027,174 @@
    }
   },
   {
-   "raw": "General – Counsel",
+   "raw": "  General Counsel , US",
+   "canonical": "General Counsel",
+   "ops": [
+    "whitespace-slip",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "general   counsel, MBA",
+   "canonical": "General Counsel",
+   "ops": [
+    "case-mangle",
+    "separator-variant",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "General – Counsel | We're hiring 🚀",
+   "canonical": "General Counsel",
+   "ops": [
+    "separator-variant",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "General   Counsel",
+   "canonical": "General Counsel",
+   "ops": [
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "General Counsel, EMEA",
+   "canonical": "General Counsel",
+   "ops": [
+    "whitespace-slip",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "General Counsel, APAC",
+   "canonical": "General Counsel",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Legal"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "General - Counsel",
    "canonical": "General Counsel",
    "ops": [
     "separator-variant"
@@ -48582,179 +48248,11 @@
    }
   },
   {
-   "raw": "GENERAL, – COUNSEL",
-   "canonical": "General Counsel",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap",
-    "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "GENERAL COUNSEL, CFA",
-   "canonical": "General Counsel",
-   "ops": [
-    "case-mangle",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "General Counsel, Benelux",
-   "canonical": "General Counsel",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "general, counsel, PMP",
-   "canonical": "General Counsel",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "General Counsel @ Northwind Traders",
-   "canonical": "General Counsel",
-   "ops": [
-    "whitespace-slip",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "General Counsel, DACH",
-   "canonical": "General Counsel",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Legal"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "General   Counsel, MBA",
+   "raw": "General, - Counsel",
    "canonical": "General Counsel",
    "ops": [
     "separator-variant",
-    "credential-suffix"
+    "punctuation-swap"
    ],
    "gold": {
     "function": {
@@ -48778,10 +48276,11 @@
    }
   },
   {
-   "raw": "General Counsel, PhD",
+   "raw": "general counsel, US",
    "canonical": "General Counsel",
    "ops": [
-    "credential-suffix"
+    "case-mangle",
+    "region-suffix"
    ],
    "gold": {
     "function": {
@@ -48799,17 +48298,16 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
   },
   {
-   "raw": "General, Counsel, CPA",
+   "raw": "General Counsel, Nordics",
    "canonical": "General Counsel",
    "ops": [
-    "punctuation-swap",
-    "credential-suffix"
+    "region-suffix"
    ],
    "gold": {
     "function": {
@@ -48827,16 +48325,16 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
   },
   {
-   "raw": "General Counsel, MBA | #opentowork",
+   "raw": "General Counsel, US 🚀🚀",
    "canonical": "General Counsel",
    "ops": [
-    "credential-suffix",
+    "region-suffix",
     "appended-junk"
    ],
    "gold": {
@@ -48855,17 +48353,17 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
   },
   {
-   "raw": "General, Counsel | We're hiring 🚀",
+   "raw": "General, Counsel, APAC",
    "canonical": "General Counsel",
    "ops": [
     "punctuation-swap",
-    "appended-junk"
+    "region-suffix"
    ],
    "gold": {
     "function": {
@@ -48883,7 +48381,7 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
@@ -48909,89 +48407,6 @@
      "kind": "labelled",
      "values": [
       "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "help desk technician, US",
-   "canonical": "Help Desk Technician",
-   "ops": [
-    "case-mangle",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Help Desk Technician | #opentowork",
-   "canonical": "Help Desk Technician",
-   "ops": [
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Help – Desk Technician, US",
-   "canonical": "Help Desk Technician",
-   "ops": [
-    "separator-variant",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
      ]
     }
    }
@@ -49024,37 +48439,10 @@
    }
   },
   {
-   "raw": "Help Desk Technician | ex-Contoso, Nordics",
+   "raw": "help desk, technician",
    "canonical": "Help Desk Technician",
    "ops": [
-    "appended-junk",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Help Desk, Technician",
-   "canonical": "Help Desk Technician",
-   "ops": [
+    "case-mangle",
     "punctuation-swap"
    ],
    "gold": {
@@ -49079,38 +48467,38 @@
    }
   },
   {
-   "raw": "Help  Desk Technician, US",
-   "canonical": "Help Desk Technician",
-   "ops": [
-    "whitespace-slip",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Help, Desk Technician | #opentowork",
+   "raw": "HELP, DESK TECHNICIAN",
    "canonical": "Help Desk Technician",
    "ops": [
     "punctuation-swap",
+    "case-mangle"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "help desk technician @ Northwind Traders",
+   "canonical": "Help Desk Technician",
+   "ops": [
+    "case-mangle",
     "appended-junk"
    ],
    "gold": {
@@ -49135,120 +48523,10 @@
    }
   },
   {
-   "raw": "Help Desk   Technician | We're hiring 🚀",
+   "raw": "Help – Desk Technician, CFA",
    "canonical": "Help Desk Technician",
    "ops": [
     "separator-variant",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Help Desk ,  Technician",
-   "canonical": "Help Desk Technician",
-   "ops": [
-    "separator-variant",
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Help Desk Technician, DACH",
-   "canonical": "Help Desk Technician",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Help Desk – Technician, ANZ",
-   "canonical": "Help Desk Technician",
-   "ops": [
-    "separator-variant",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Help Desk Technician, CPA",
-   "canonical": "Help Desk Technician",
-   "ops": [
     "credential-suffix"
    ],
    "gold": {
@@ -49273,10 +48551,64 @@
    }
   },
   {
-   "raw": "HELP DESK TECHNICIAN @ Northwind Traders",
+   "raw": "Help - Desk Technician",
+   "canonical": "Help Desk Technician",
+   "ops": [
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "help desk technician, Benelux",
    "canonical": "Help Desk Technician",
    "ops": [
     "case-mangle",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Help Desk Technician | Acme Corp",
+   "canonical": "Help Desk Technician",
+   "ops": [
     "appended-junk"
    ],
    "gold": {
@@ -49301,11 +48633,12 @@
    }
   },
   {
-   "raw": "HELP DESK TECHNICIAN | We're hiring 🚀",
+   "raw": "help, desk technician, EMEA",
    "canonical": "Help Desk Technician",
    "ops": [
     "case-mangle",
-    "appended-junk"
+    "punctuation-swap",
+    "region-suffix"
    ],
    "gold": {
     "function": {
@@ -49323,18 +48656,45 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "None"
+      "Regional"
      ]
     }
    }
   },
   {
-   "raw": "Help desk technician, Nordics, CPA",
+   "raw": "help desk technician, EMEA | #opentowork",
    "canonical": "Help Desk Technician",
    "ops": [
     "case-mangle",
     "region-suffix",
-    "credential-suffix"
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Help Desk Technician, ANZ",
+   "canonical": "Help Desk Technician",
+   "ops": [
+    "region-suffix"
    ],
    "gold": {
     "function": {
@@ -49383,10 +48743,10 @@
    }
   },
   {
-   "raw": "  Systems Administrator , APAC",
+   "raw": "Systems Administrator | #opentowork, EMEA",
    "canonical": "Systems Administrator",
    "ops": [
-    "whitespace-slip",
+    "appended-junk",
     "region-suffix"
    ],
    "gold": {
@@ -49411,10 +48771,318 @@
    }
   },
   {
-   "raw": "Systems Administrator, CFA",
+   "raw": "Systems Administrator, PhD, Benelux",
    "canonical": "Systems Administrator",
    "ops": [
+    "whitespace-slip",
+    "credential-suffix",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Systems - Administrator, CPA",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "separator-variant",
     "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Systems  Administrator",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "whitespace-slip"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Systems Administrator, US",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "SYSTEMS ADMINISTRATOR, APAC @ Northwind Traders",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "case-mangle",
+    "region-suffix",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Systems -, Administrator | #opentowork",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "separator-variant",
+    "punctuation-swap",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "SYSTEMS - ADMINISTRATOR",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "case-mangle",
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "SYSTEMS ADMINISTRATOR, PhD",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "case-mangle",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Systems, Administrator, CPA",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "punctuation-swap",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Systems Administrator, Nordics",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Systems Administrator 🚀🚀",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Systems, - Administrator",
+   "canonical": "Systems Administrator",
+   "ops": [
+    "separator-variant",
+    "punctuation-swap"
    ],
    "gold": {
     "function": {
@@ -49466,227 +49134,6 @@
    }
   },
   {
-   "raw": "Systems Administrator, US",
-   "canonical": "Systems Administrator",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Systems   Administrator",
-   "canonical": "Systems Administrator",
-   "ops": [
-    "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Systems -, Administrator",
-   "canonical": "Systems Administrator",
-   "ops": [
-    "separator-variant",
-    "punctuation-swap"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "systems, administrator, DACH",
-   "canonical": "Systems Administrator",
-   "ops": [
-    "case-mangle",
-    "punctuation-swap",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Systems Administrator, ANZ",
-   "canonical": "Systems Administrator",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Systems –  Administrator",
-   "canonical": "Systems Administrator",
-   "ops": [
-    "whitespace-slip",
-    "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Systems, Administrator, Benelux",
-   "canonical": "Systems Administrator",
-   "ops": [
-    "punctuation-swap",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Systems Administrator, CPA",
-   "canonical": "Systems Administrator",
-   "ops": [
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
    "raw": "IT Manager",
    "canonical": "IT Manager",
    "ops": [],
@@ -49712,9 +49159,38 @@
    }
   },
   {
-   "raw": "IT - IT Manager, PhD",
+   "raw": "IT - Manager (IT)",
    "canonical": "IT Manager",
    "ops": [
+    "parenthetical-department",
+    "department-prefix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "IT - it manager, PhD",
+   "canonical": "IT Manager",
+   "ops": [
+    "case-mangle",
     "department-prefix",
     "credential-suffix"
    ],
@@ -49740,10 +49216,10 @@
    }
   },
   {
-   "raw": "IT Manager, PhD | We're hiring 🚀",
+   "raw": "IT - IT Manager | #opentowork",
    "canonical": "IT Manager",
    "ops": [
-    "credential-suffix",
+    "department-prefix",
     "appended-junk"
    ],
    "gold": {
@@ -49768,65 +49244,11 @@
    }
   },
   {
-   "raw": "IT – Manager, Benelux",
+   "raw": "IT MANAGER, MBA",
    "canonical": "IT Manager",
    "ops": [
-    "separator-variant",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT Manager, Benelux",
-   "canonical": "IT Manager",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT, Manager",
-   "canonical": "IT Manager",
-   "ops": [
-    "punctuation-swap"
+    "case-mangle",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -49850,10 +49272,124 @@
    }
   },
   {
-   "raw": "- IT Manager (IT)",
+   "raw": "IT - It manager",
+   "canonical": "IT Manager",
+   "ops": [
+    "case-mangle",
+    "department-prefix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "it manager | ex-Contoso, CFA",
+   "canonical": "IT Manager",
+   "ops": [
+    "case-mangle",
+    "appended-junk",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "it manager | We're hiring 🚀",
+   "canonical": "IT Manager",
+   "ops": [
+    "case-mangle",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "IT, - IT Manager, CPA",
    "canonical": "IT Manager",
    "ops": [
     "department-prefix",
+    "punctuation-swap",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Manager (IT)",
+   "canonical": "IT Manager",
+   "ops": [
+    "whitespace-slip",
     "parenthetical-department"
    ],
    "gold": {
@@ -49878,40 +49414,11 @@
    }
   },
   {
-   "raw": "  IT, Manager  @ Northwind Traders",
-   "canonical": "IT Manager",
-   "ops": [
-    "punctuation-swap",
-    "whitespace-slip",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT - Mgr.",
+   "raw": "  IT Mgr. ",
    "canonical": "IT Manager",
    "ops": [
     "abbreviation",
-    "separator-variant"
+    "whitespace-slip"
    ],
    "gold": {
     "function": {
@@ -49935,10 +49442,9 @@
    }
   },
   {
-   "raw": "it manager, PhD",
+   "raw": "IT Manager, PMP",
    "canonical": "IT Manager",
    "ops": [
-    "case-mangle",
     "credential-suffix"
    ],
    "gold": {
@@ -49963,65 +49469,11 @@
    }
   },
   {
-   "raw": "IT MANAGER @ Northwind Traders",
+   "raw": "IT, Mgr., UK",
    "canonical": "IT Manager",
    "ops": [
-    "case-mangle",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT   Manager",
-   "canonical": "IT Manager",
-   "ops": [
-    "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT  Manager, Benelux",
-   "canonical": "IT Manager",
-   "ops": [
-    "whitespace-slip",
+    "abbreviation",
+    "punctuation-swap",
     "region-suffix"
    ],
    "gold": {
@@ -50046,96 +49498,95 @@
    }
   },
   {
-   "raw": "Manager (IT) | We're hiring 🚀",
+   "raw": "IT  Manager",
+   "canonical": "IT Manager",
+   "ops": [
+    "whitespace-slip"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Manager (IT), CFA",
+   "canonical": "IT Manager",
+   "ops": [
+    "whitespace-slip",
+    "parenthetical-department",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Manager (Information Technology), DACH",
+   "canonical": "IT Manager",
+   "ops": [
+    "parenthetical-department",
+    "abbreviation",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "IT – Manager, UK",
    "canonical": "IT Manager",
    "ops": [
     "separator-variant",
-    "parenthetical-department",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT Manager, Benelux 🚀🚀, CFA",
-   "canonical": "IT Manager",
-   "ops": [
-    "region-suffix",
-    "appended-junk",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "It manager | #opentowork",
-   "canonical": "IT Manager",
-   "ops": [
-    "case-mangle",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "  IT Manager , US",
-   "canonical": "IT Manager",
-   "ops": [
-    "whitespace-slip",
     "region-suffix"
    ],
    "gold": {
@@ -50155,62 +49606,6 @@
      "kind": "labelled",
      "values": [
       "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT - IT Manager, EMEA",
-   "canonical": "IT Manager",
-   "ops": [
-    "whitespace-slip",
-    "department-prefix",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT Manager 🚀🚀",
-   "canonical": "IT Manager",
-   "ops": [
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
      ]
     }
    }
@@ -50241,10 +49636,233 @@
    }
   },
   {
-   "raw": "- IT Director (IT), ANZ",
+   "raw": "Director (IT), CPA | Acme Corp",
+   "canonical": "IT Director",
+   "ops": [
+    "parenthetical-department",
+    "credential-suffix",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "IT - IT DIRECTOR",
    "canonical": "IT Director",
    "ops": [
     "department-prefix",
+    "case-mangle"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "It - it dir.",
+   "canonical": "IT Director",
+   "ops": [
+    "abbreviation",
+    "department-prefix",
+    "case-mangle"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "it director, PhD",
+   "canonical": "IT Director",
+   "ops": [
+    "case-mangle",
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "IT Director | Acme Corp",
+   "canonical": "IT Director",
+   "ops": [
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "IT Director, CPA",
+   "canonical": "IT Director",
+   "ops": [
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "IT  - IT Director",
+   "canonical": "IT Director",
+   "ops": [
+    "department-prefix",
+    "whitespace-slip"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "  Director (IT) ",
+   "canonical": "IT Director",
+   "ops": [
+    "parenthetical-department",
+    "whitespace-slip"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director (IT), APAC",
+   "canonical": "IT Director",
+   "ops": [
     "parenthetical-department",
     "region-suffix"
    ],
@@ -50270,12 +49888,11 @@
    }
   },
   {
-   "raw": "IT - IT Director, DACH | Acme Corp",
+   "raw": "IT - IT Director, US",
    "canonical": "IT Director",
    "ops": [
     "department-prefix",
-    "region-suffix",
-    "appended-junk"
+    "region-suffix"
    ],
    "gold": {
     "function": {
@@ -50299,10 +49916,10 @@
    }
   },
   {
-   "raw": "IT – Director",
+   "raw": "IT, Director",
    "canonical": "IT Director",
    "ops": [
-    "separator-variant"
+    "punctuation-swap"
    ],
    "gold": {
     "function": {
@@ -50326,67 +49943,9 @@
    }
   },
   {
-   "raw": "IT - IT Director, PMP",
+   "raw": "Information Technology Director",
    "canonical": "IT Director",
    "ops": [
-    "department-prefix",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT - IT Director, ANZ, PhD",
-   "canonical": "IT Director",
-   "ops": [
-    "department-prefix",
-    "region-suffix",
-    "credential-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Information Technology - IT Director",
-   "canonical": "IT Director",
-   "ops": [
-    "department-prefix",
     "abbreviation"
    ],
    "gold": {
@@ -50411,11 +49970,69 @@
    }
   },
   {
-   "raw": "IT - IT - Director, PhD",
+   "raw": "director – (it)",
+   "canonical": "IT Director",
+   "ops": [
+    "parenthetical-department",
+    "separator-variant",
+    "case-mangle"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director – (IT), APAC",
+   "canonical": "IT Director",
+   "ops": [
+    "parenthetical-department",
+    "separator-variant",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "IT ,  Director, PMP",
    "canonical": "IT Director",
    "ops": [
     "separator-variant",
-    "department-prefix",
+    "punctuation-swap",
     "credential-suffix"
    ],
    "gold": {
@@ -50440,39 +50057,12 @@
    }
   },
   {
-   "raw": "IT – Dir.",
-   "canonical": "IT Director",
-   "ops": [
-    "abbreviation",
-    "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Information Technology DIRECTOR",
+   "raw": "IT, - it director",
    "canonical": "IT Director",
    "ops": [
     "case-mangle",
-    "abbreviation"
+    "department-prefix",
+    "punctuation-swap"
    ],
    "gold": {
     "function": {
@@ -50496,180 +50086,12 @@
    }
   },
   {
-   "raw": "  IT Dir.  | #opentowork",
+   "raw": "Information, Technology Director | We're hiring 🚀",
    "canonical": "IT Director",
    "ops": [
     "abbreviation",
-    "whitespace-slip",
+    "punctuation-swap",
     "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Director (IT)",
-   "canonical": "IT Director",
-   "ops": [
-    "parenthetical-department"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT - Information Technology Director",
-   "canonical": "IT Director",
-   "ops": [
-    "abbreviation",
-    "department-prefix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "IT  DIRECTOR",
-   "canonical": "IT Director",
-   "ops": [
-    "whitespace-slip",
-    "case-mangle"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "  IT Director  | ex-Contoso",
-   "canonical": "IT Director",
-   "ops": [
-    "whitespace-slip",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "- IT Director (IT) | #opentowork",
-   "canonical": "IT Director",
-   "ops": [
-    "department-prefix",
-    "parenthetical-department",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "It - it director",
-   "canonical": "IT Director",
-   "ops": [
-    "department-prefix",
-    "case-mangle"
    ],
    "gold": {
     "function": {
@@ -50718,38 +50140,11 @@
    }
   },
   {
-   "raw": "Director of IT | #opentowork",
+   "raw": "director information technology",
    "canonical": "Director of Information Technology",
    "ops": [
-    "abbreviation",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Director of Information Technology | Acme Corp",
-   "canonical": "Director of Information Technology",
-   "ops": [
-    "appended-junk"
+    "case-mangle",
+    "punctuation-swap"
    ],
    "gold": {
     "function": {
@@ -50863,33 +50258,6 @@
     "case-mangle",
     "punctuation-swap",
     "separator-variant"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Director"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Director Information Technology",
-   "canonical": "Director of Information Technology",
-   "ops": [
-    "punctuation-swap"
    ],
    "gold": {
     "function": {
@@ -51079,6 +50447,62 @@
    }
   },
   {
+   "raw": "DIRECTOR OF INFORMATION TECHNOLOGY, UK",
+   "canonical": "Director of Information Technology",
+   "ops": [
+    "case-mangle",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Director – Information Technology, APAC",
+   "canonical": "Director of Information Technology",
+   "ops": [
+    "separator-variant",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
    "raw": "VP of IT",
    "canonical": "VP of IT",
    "ops": [],
@@ -51099,62 +50523,6 @@
      "kind": "labelled",
      "values": [
       "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "VP OF IT, UK",
-   "canonical": "VP of IT",
-   "ops": [
-    "case-mangle",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "VP"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "VP – IT, APAC",
-   "canonical": "VP of IT",
-   "ops": [
-    "separator-variant",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "VP"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
      ]
     }
    }
@@ -51466,9 +50834,12 @@
    }
   },
   {
-   "raw": "Chief Information Officer",
-   "canonical": "Chief Information Officer",
-   "ops": [],
+   "raw": "VP – IT @ Northwind Traders",
+   "canonical": "VP of IT",
+   "ops": [
+    "separator-variant",
+    "appended-junk"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -51479,7 +50850,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "CSuite"
+      "VP"
      ]
     },
     "scope": {
@@ -51491,11 +50862,9 @@
    }
   },
   {
-   "raw": "Chief – Information Officer",
+   "raw": "Chief Information Officer",
    "canonical": "Chief Information Officer",
-   "ops": [
-    "separator-variant"
-   ],
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -51545,38 +50914,11 @@
    }
   },
   {
-   "raw": "Chief Information, Officer, LATAM",
+   "raw": "CIO, PhD",
    "canonical": "Chief Information Officer",
    "ops": [
-    "punctuation-swap",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "IT"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Chief Information, Officer",
-   "canonical": "Chief Information Officer",
-   "ops": [
-    "punctuation-swap"
+    "abbreviation",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -51877,33 +51219,8 @@
    }
   },
   {
-   "raw": "Security Analyst",
-   "canonical": "Security Analyst",
-   "ops": [],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Security"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "IC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Security, analyst, PMP",
-   "canonical": "Security Analyst",
+   "raw": "Chief information, officer, PMP",
+   "canonical": "Chief Information Officer",
    "ops": [
     "case-mangle",
     "punctuation-swap",
@@ -51913,13 +51230,13 @@
     "function": {
      "kind": "labelled",
      "values": [
-      "Security"
+      "IT"
      ]
     },
     "seniority": {
      "kind": "labelled",
      "values": [
-      "IC"
+      "CSuite"
      ]
     },
     "scope": {
@@ -51931,12 +51248,37 @@
    }
   },
   {
-   "raw": "security analyst | We're hiring 🚀",
-   "canonical": "Security Analyst",
+   "raw": "chief information officer | We're hiring 🚀",
+   "canonical": "Chief Information Officer",
    "ops": [
     "case-mangle",
     "appended-junk"
    ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "IT"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Security Analyst",
+   "canonical": "Security Analyst",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -52322,6 +51664,62 @@
    }
   },
   {
+   "raw": "Security - Security Analyst | Acme Corp",
+   "canonical": "Security Analyst",
+   "ops": [
+    "department-prefix",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Security"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Security Analyst, EMEA | Acme Corp",
+   "canonical": "Security Analyst",
+   "ops": [
+    "region-suffix",
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Security"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "IC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
    "raw": "Senior Security Engineer",
    "canonical": "Senior Security Engineer",
    "ops": [],
@@ -52342,61 +51740,6 @@
      "kind": "labelled",
      "values": [
       "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Senior Security Engineer | Acme Corp",
-   "canonical": "Senior Security Engineer",
-   "ops": [
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Security"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Senior Security Engineer, EMEA | Acme Corp",
-   "canonical": "Senior Security Engineer",
-   "ops": [
-    "region-suffix",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Security"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "SeniorIC"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
      ]
     }
    }
@@ -52736,64 +52079,37 @@
    }
   },
   {
-   "raw": "Information Security Manager",
-   "canonical": "Information Security Manager",
-   "ops": [],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Security"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Information Security Mgr.",
-   "canonical": "Information Security Manager",
-   "ops": [
-    "abbreviation"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Security"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "Manager"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "Information  Security – Manager",
-   "canonical": "Information Security Manager",
+   "raw": "Senior  Security – Engineer",
+   "canonical": "Senior Security Engineer",
    "ops": [
     "whitespace-slip",
     "separator-variant"
    ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Security"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "SeniorIC"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Information Security Manager",
+   "canonical": "Information Security Manager",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -52933,6 +52249,34 @@
     "case-mangle",
     "separator-variant",
     "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Security"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "INFORMATION SECURITY MGR.",
+   "canonical": "Information Security Manager",
+   "ops": [
+    "abbreviation",
+    "case-mangle"
    ],
    "gold": {
     "function": {
@@ -53208,9 +52552,11 @@
    }
   },
   {
-   "raw": "Security Operations Manager",
-   "canonical": "Security Operations Manager",
-   "ops": [],
+   "raw": "Information   Security Manager",
+   "canonical": "Information Security Manager",
+   "ops": [
+    "separator-variant"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -53233,11 +52579,9 @@
    }
   },
   {
-   "raw": "Security   Operations Manager",
+   "raw": "Security Operations Manager",
    "canonical": "Security Operations Manager",
-   "ops": [
-    "separator-variant"
-   ],
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -53431,6 +52775,34 @@
    "ops": [
     "case-mangle",
     "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Security"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Manager"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "SECURITY   OPERATIONS MANAGER",
+   "canonical": "Security Operations Manager",
+   "ops": [
+    "case-mangle",
+    "separator-variant"
    ],
    "gold": {
     "function": {
@@ -53874,33 +53246,8 @@
    }
   },
   {
-   "raw": "VP of Security",
-   "canonical": "VP of Security",
-   "ops": [],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "Security"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "VP"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "VP - Security",
-   "canonical": "VP of Security",
+   "raw": "Director - Security",
+   "canonical": "Director of Security",
    "ops": [
     "separator-variant"
    ],
@@ -53914,7 +53261,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "VP"
+      "Director"
      ]
     },
     "scope": {
@@ -53926,12 +53273,37 @@
    }
   },
   {
-   "raw": "vp of security, MBA",
-   "canonical": "VP of Security",
+   "raw": "director of security, MBA",
+   "canonical": "Director of Security",
    "ops": [
     "case-mangle",
     "credential-suffix"
    ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Security"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "Director"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "VP of Security",
+   "canonical": "VP of Security",
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -54344,9 +53716,12 @@
    }
   },
   {
-   "raw": "Chief Information Security Officer",
-   "canonical": "Chief Information Security Officer",
-   "ops": [],
+   "raw": "VP,  Security",
+   "canonical": "VP of Security",
+   "ops": [
+    "punctuation-swap",
+    "whitespace-slip"
+   ],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -54357,7 +53732,7 @@
     "seniority": {
      "kind": "labelled",
      "values": [
-      "CSuite"
+      "VP"
      ]
     },
     "scope": {
@@ -54369,12 +53744,9 @@
    }
   },
   {
-   "raw": "Chief,  Information Security Officer",
+   "raw": "Chief Information Security Officer",
    "canonical": "Chief Information Security Officer",
-   "ops": [
-    "punctuation-swap",
-    "whitespace-slip"
-   ],
+   "ops": [],
    "gold": {
     "function": {
      "kind": "labelled",
@@ -54784,6 +54156,33 @@
    }
   },
   {
+   "raw": "Chief Information Security, Officer",
+   "canonical": "Chief Information Security Officer",
+   "ops": [
+    "punctuation-swap"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "Security"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
    "raw": "CEO",
    "canonical": "CEO",
    "ops": [],
@@ -54809,7 +54208,62 @@
    }
   },
   {
-   "raw": "CEO | ex-Contoso",
+   "raw": "CEO, DACH",
+   "canonical": "CEO",
+   "ops": [
+    "case-mangle",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "ExecGeneral"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "CEO, PMP",
+   "canonical": "CEO",
+   "ops": [
+    "credential-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "ExecGeneral"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "CEO | #opentowork",
    "canonical": "CEO",
    "ops": [
     "appended-junk"
@@ -54836,11 +54290,12 @@
    }
   },
   {
-   "raw": "Chief  Executive Officer",
+   "raw": "Chief Executive Officer, PhD",
    "canonical": "CEO",
    "ops": [
+    "whitespace-slip",
     "abbreviation",
-    "whitespace-slip"
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -54864,11 +54319,11 @@
    }
   },
   {
-   "raw": "CEO, CFA, DACH",
+   "raw": "Ceo, MBA",
    "canonical": "CEO",
    "ops": [
-    "credential-suffix",
-    "region-suffix"
+    "case-mangle",
+    "credential-suffix"
    ],
    "gold": {
     "function": {
@@ -54886,15 +54341,43 @@
     "scope": {
      "kind": "labelled",
      "values": [
-      "Regional"
+      "None"
      ]
     }
    }
   },
   {
-   "raw": "CEO 🚀🚀",
+   "raw": "CEO @ Northwind Traders",
    "canonical": "CEO",
    "ops": [
+    "appended-junk"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "ExecGeneral"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "CEO, PMP | Acme Corp",
+   "canonical": "CEO",
+   "ops": [
+    "credential-suffix",
     "appended-junk"
    ],
    "gold": {
@@ -54971,6 +54454,33 @@
    }
   },
   {
+   "raw": "Chief   Executive Officer",
+   "canonical": "Chief Executive Officer",
+   "ops": [
+    "separator-variant"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "ExecGeneral"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "None"
+     ]
+    }
+   }
+  },
+  {
    "raw": "Chief Executive Officer | ex-Contoso",
    "canonical": "Chief Executive Officer",
    "ops": [
@@ -54998,11 +54508,11 @@
    }
   },
   {
-   "raw": "Chief -, Executive Officer",
+   "raw": "CHIEF - EXECUTIVE OFFICER",
    "canonical": "Chief Executive Officer",
    "ops": [
-    "separator-variant",
-    "punctuation-swap"
+    "case-mangle",
+    "separator-variant"
    ],
    "gold": {
     "function": {
@@ -55884,34 +55394,6 @@
    }
   },
   {
-   "raw": "COO, DACH",
-   "canonical": "Chief Operating Officer",
-   "ops": [
-    "abbreviation",
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "ExecGeneral"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "CSuite"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
    "raw": "President",
    "canonical": "President",
    "ops": [],
@@ -55932,6 +55414,33 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "President, DACH",
+   "canonical": "President",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "ExecGeneral"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "CSuite"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -56900,33 +56409,6 @@
    }
   },
   {
-   "raw": "Owner, DACH",
-   "canonical": "Owner",
-   "ops": [
-    "region-suffix"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "ExecGeneral"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "FounderOwner"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "Regional"
-     ]
-    }
-   }
-  },
-  {
    "raw": "Managing Partner",
    "canonical": "Managing Partner",
    "ops": [],
@@ -56947,6 +56429,33 @@
      "kind": "labelled",
      "values": [
       "None"
+     ]
+    }
+   }
+  },
+  {
+   "raw": "Managing Partner, DACH",
+   "canonical": "Managing Partner",
+   "ops": [
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "ExecGeneral"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "FounderOwner"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
      ]
     }
    }
@@ -57282,6 +56791,34 @@
    }
   },
   {
+   "raw": "BOARD MEMBER, UK",
+   "canonical": "Board Member",
+   "ops": [
+    "case-mangle",
+    "region-suffix"
+   ],
+   "gold": {
+    "function": {
+     "kind": "labelled",
+     "values": [
+      "ExecGeneral"
+     ]
+    },
+    "seniority": {
+     "kind": "labelled",
+     "values": [
+      "FounderOwner"
+     ]
+    },
+    "scope": {
+     "kind": "labelled",
+     "values": [
+      "Regional"
+     ]
+    }
+   }
+  },
+  {
    "raw": "Board Member @ Northwind Traders, LATAM",
    "canonical": "Board Member",
    "ops": [
@@ -57555,34 +57092,6 @@
      "kind": "labelled",
      "values": [
       "Regional"
-     ]
-    }
-   }
-  },
-  {
-   "raw": "board member | ex-Contoso",
-   "canonical": "Board Member",
-   "ops": [
-    "case-mangle",
-    "appended-junk"
-   ],
-   "gold": {
-    "function": {
-     "kind": "labelled",
-     "values": [
-      "ExecGeneral"
-     ]
-    },
-    "seniority": {
-     "kind": "labelled",
-     "values": [
-      "FounderOwner"
-     ]
-    },
-    "scope": {
-     "kind": "labelled",
-     "values": [
-      "None"
      ]
     }
    }

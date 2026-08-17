@@ -128,7 +128,9 @@ export const CANONICAL_ROLES: CanonicalRole[] = [
   { title: "Associate Product Manager", function: "Product", seniority: "IC" },
   { title: "Product Manager", function: "Product", seniority: "Manager" },
   { title: "Senior Product Manager", function: "Product", seniority: "Manager" },
-  { title: "Group Product Manager", function: "Product", seniority: "Manager" },
+  // `Group Product Manager` is deliberately absent: its rung is a genuine
+  // [Manager, Director] straddle, so it belongs in the adversarial corpus rather
+  // than in a corpus of unambiguous canonical roles.
   { title: "Director of Product", function: "Product", seniority: "Director" },
   { title: "VP of Product", function: "Product", seniority: "VP" },
   { title: "Chief Product Officer", function: "Product", seniority: "CSuite" },

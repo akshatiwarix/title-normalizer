@@ -496,6 +496,7 @@ const ENGINEERING_ENTRIES: LexiconEntry[] = [
   {
     pattern: "software engineer",
     kind: "phrase",
+    seniority: "IC",
     function: "Engineering",
     note: "the unambiguous case, kept as a phrase so the generator has a canonical form",
   },
@@ -524,6 +525,20 @@ const ENGINEERING_ENTRIES: LexiconEntry[] = [
 
 const PRODUCT_ENTRIES: LexiconEntry[] = [
   { pattern: "product", kind: "token", function: "Product" },
+  {
+    pattern: "associate product manager",
+    kind: "phrase",
+    function: "Product",
+    seniority: "IC",
+    note: "an APM is a junior IC; the phrase has to outrank `product manager`, which would say Manager",
+  },
+  {
+    pattern: "associate product mgr",
+    kind: "phrase",
+    function: "Product",
+    seniority: "IC",
+    note: "the abbreviated APM; without it `mgr` supplies the Manager rung and the title reads a level too senior",
+  },
   {
     pattern: "group product manager",
     kind: "phrase",
@@ -606,6 +621,7 @@ const DATA_ENTRIES: LexiconEntry[] = [
     note: "kept as a phrase so `science` never stands alone",
   },
   { pattern: "scientist", kind: "token", function: "Data", seniority: "IC" },
+  { pattern: "researcher", kind: "token", seniority: "IC" },
   {
     pattern: "business intelligence",
     kind: "phrase",
@@ -738,6 +754,7 @@ const IT_ENTRIES: LexiconEntry[] = [
   {
     pattern: "systems administrator",
     kind: "phrase",
+    seniority: "IC",
     function: "IT",
     note: "the `administrator` token carries the IC rung, this phrase carries the function",
   },
@@ -787,6 +804,7 @@ const SECURITY_ENTRIES: LexiconEntry[] = [
   {
     pattern: "security engineer",
     kind: "phrase",
+    seniority: "IC",
     function: "Security",
     note: "Security, not Engineering: the security org owns the role even though the word is engineer",
   },
