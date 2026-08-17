@@ -14,6 +14,7 @@ import {
   type Result,
 } from "@/lib/normalize";
 import { Abstentions, groupAbstentions } from "./Abstentions";
+import { ProposeButton } from "./ProposePanel";
 import { Scorecard } from "./Scorecard";
 import { Verdicts } from "./Verdicts";
 import { Button, Panel } from "./ui";
@@ -218,7 +219,7 @@ export function Console({
             metrics={corpora.map((view) => view.metrics)}
             pasted={pastedCoverage}
           />
-          <Abstentions groups={groups} />
+          <Abstentions groups={groups} action={(group) => <ProposeButton group={group} />} />
         </div>
       </div>
     </main>

@@ -99,9 +99,9 @@ export function Abstentions({
                   <span className="marking !text-current">{copy.label}</span>
                   <span className="tabular ml-2 font-mono text-xs">{group.titles.length}</span>
                 </div>
-                {action ? action(group) : null}
               </div>
               <p className="mt-0.5 text-[0.6875rem] text-slate">{copy.verdict}</p>
+              {action ? <div className="mt-1.5">{action(group)}</div> : null}
               <ul className="mt-1.5 space-y-0.5">
                 {group.titles.slice(0, 12).map((title) => (
                   <li key={title.raw} className="font-mono text-[0.6875rem] text-ink">
