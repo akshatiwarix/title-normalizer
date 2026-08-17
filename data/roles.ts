@@ -28,7 +28,9 @@ export const CANONICAL_ROLES: CanonicalRole[] = [
   { title: "Sales Development Representative", function: "Sales", seniority: "IC" },
   { title: "Business Development Representative", function: "Sales", seniority: "IC" },
   { title: "Account Executive", function: "Sales", seniority: "IC" },
-  { title: "Senior Account Executive", function: "Sales", seniority: "IC" },
+  // `Senior` names the IC seniority track, so the rung moves even though the
+  // phrase `Account Executive` carries IC on its own.
+  { title: "Senior Account Executive", function: "Sales", seniority: "SeniorIC" },
   { title: "Sales Representative", function: "Sales", seniority: "IC", functionWord: "Sales" },
   // No `functionWord`: moving `Sales` into a parenthetical would leave `Engineer
   // (Sales)`, and that is a meaning-changing edit rather than noise.

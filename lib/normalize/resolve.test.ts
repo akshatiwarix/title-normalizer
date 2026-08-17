@@ -252,7 +252,7 @@ describe("derived dimensions cannot contradict their inputs", () => {
   it("cannot name a persona without a band, however clear the function is", () => {
     // No rung in the string means no band, and a persona is (function, band).
     // Inventing "Product IC" here would be the contradiction this shape prevents.
-    const r = normalizeTitle("Product Support Engineer");
+    const r = normalizeTitle("Product Support");
     expect(r.function.state).toBe("ambiguous");
     expect(r.persona).toMatchObject({ state: "unknown", reason: "no-evidence" });
   });

@@ -188,6 +188,19 @@ const SALES_ENTRIES: LexiconEntry[] = [
     note: "the expanded form of BDR",
   },
   {
+    pattern: "bus dev",
+    kind: "phrase",
+    function: "Sales",
+    note: "the abbreviated form; without it `dev` claims the title for Engineering",
+  },
+  {
+    pattern: "commercial director",
+    kind: "phrase",
+    function: "Sales",
+    seniority: "Director",
+    note: "the British form of a sales leader, and an ordinary English title despite looking foreign",
+  },
+  {
     pattern: "business development",
     kind: "phrase",
     function: "Sales",
@@ -196,30 +209,35 @@ const SALES_ENTRIES: LexiconEntry[] = [
   {
     pattern: "sales engineer",
     kind: "phrase",
+    seniority: "IC",
     function: "Sales",
     note: "presales: the phrase exists precisely so the `engineer` token cannot claim it for Engineering",
   },
   {
     pattern: "solutions engineer",
     kind: "phrase",
+    seniority: "IC",
     function: "Sales",
     note: "the same presales role under a different name",
   },
   {
     pattern: "solutions architect",
     kind: "phrase",
+    seniority: "IC",
     function: "Sales",
     note: "presales in a GTM org; the `architect` token would otherwise send it to Engineering",
   },
   {
     pattern: "solutions consultant",
     kind: "phrase",
+    seniority: "IC",
     function: "Sales",
     note: "presales again — the third name for it",
   },
   {
     pattern: "account manager",
     kind: "phrase",
+    seniority: "Manager",
     function: ["Sales", "CustomerSuccess"],
     note: "a declared fork: an AM carries a quota in one org and owns retention in the next",
   },
@@ -244,6 +262,13 @@ const SALES_ENTRIES: LexiconEntry[] = [
     note: "Chief Revenue Officer; owns the revenue org, which this taxonomy files under Sales",
   },
   {
+    pattern: "cro",
+    kind: "token",
+    function: "Sales",
+    seniority: "CSuite",
+    note: "the token twin of the exact entry, so `Interim CRO` resolves",
+  },
+  {
     pattern: "chief revenue officer",
     kind: "phrase",
     function: "Sales",
@@ -256,6 +281,7 @@ const SALES_ENTRIES: LexiconEntry[] = [
 const MARKETING_ENTRIES: LexiconEntry[] = [
   { pattern: "marketing", kind: "token", function: "Marketing" },
   { pattern: "brand", kind: "token", function: "Marketing" },
+  { pattern: "mktg", kind: "token", function: "Marketing" },
   { pattern: "seo", kind: "token", function: "Marketing" },
   { pattern: "sem", kind: "token", function: "Marketing" },
   { pattern: "communications", kind: "token", function: "Marketing" },
@@ -302,6 +328,20 @@ const MARKETING_ENTRIES: LexiconEntry[] = [
     kind: "token",
     function: "Marketing",
     note: "content is Marketing here; content *design* is caught by the Design phrase",
+  },
+  {
+    pattern: "marketing executive",
+    kind: "phrase",
+    function: "Marketing",
+    seniority: "IC",
+    note: "the British reading: an IC, the same trap as Account Executive",
+  },
+  {
+    pattern: "cmo",
+    kind: "token",
+    function: "Marketing",
+    seniority: "CSuite",
+    note: "the token twin of the exact entry, so `Interim CMO` and `Fractional CMO` resolve",
   },
   {
     pattern: "cmo",
@@ -402,7 +442,13 @@ const CS_ENTRIES: LexiconEntry[] = [
     function: "CustomerSuccess",
     note: "the agency-flavoured synonym",
   },
-  { pattern: "csm", kind: "token", function: "CustomerSuccess" },
+  {
+    pattern: "csm",
+    kind: "token",
+    function: "CustomerSuccess",
+    seniority: "Manager",
+    note: "CSM is a Customer Success Manager; the Scrum reading loses on frequency",
+  },
   { pattern: "renewals", kind: "token", function: "CustomerSuccess" },
   { pattern: "onboarding", kind: "token", function: "CustomerSuccess" },
   {
@@ -438,19 +484,27 @@ const SUPPORT_ENTRIES: LexiconEntry[] = [
 
 const ENGINEERING_ENTRIES: LexiconEntry[] = [
   { pattern: "engineering", kind: "token", function: "Engineering" },
-  { pattern: "engineer", kind: "token", function: "Engineering" },
-  { pattern: "developer", kind: "token", function: "Engineering" },
+  { pattern: "engineer", kind: "token", function: "Engineering", seniority: "IC" },
+  { pattern: "developer", kind: "token", function: "Engineering", seniority: "IC" },
   { pattern: "dev", kind: "token", function: "Engineering" },
-  { pattern: "programmer", kind: "token", function: "Engineering" },
+  { pattern: "programmer", kind: "token", function: "Engineering", seniority: "IC" },
   { pattern: "sre", kind: "token", function: "Engineering" },
+  { pattern: "tech", kind: "token", function: "Engineering" },
   { pattern: "devops", kind: "token", function: "Engineering" },
   { pattern: "qa", kind: "token", function: "Engineering" },
-  { pattern: "architect", kind: "token", function: "Engineering" },
+  { pattern: "architect", kind: "token", function: "Engineering", seniority: "IC" },
   {
     pattern: "software engineer",
     kind: "phrase",
     function: "Engineering",
     note: "the unambiguous case, kept as a phrase so the generator has a canonical form",
+  },
+  {
+    pattern: "cto",
+    kind: "token",
+    function: "Engineering",
+    seniority: "CSuite",
+    note: "the token twin of the exact entry, so `Interim CTO` and `Fractional CTO` resolve",
   },
   {
     pattern: "cto",
@@ -471,6 +525,13 @@ const ENGINEERING_ENTRIES: LexiconEntry[] = [
 const PRODUCT_ENTRIES: LexiconEntry[] = [
   { pattern: "product", kind: "token", function: "Product" },
   {
+    pattern: "group product manager",
+    kind: "phrase",
+    function: "Product",
+    seniority: ["Manager", "Director"],
+    note: "a GPM manages PMs in some orgs and is a senior PM in others",
+  },
+  {
     pattern: "product manager",
     kind: "phrase",
     function: "Product",
@@ -485,6 +546,13 @@ const PRODUCT_ENTRIES: LexiconEntry[] = [
   },
   {
     pattern: "cpo",
+    kind: "token",
+    function: "Product",
+    seniority: "CSuite",
+    note: "the token twin of the exact entry, so `Interim CPO` and `Fractional CPO` resolve",
+  },
+  {
+    pattern: "cpo",
     kind: "exact",
     function: "Product",
     seniority: "CSuite",
@@ -493,6 +561,7 @@ const PRODUCT_ENTRIES: LexiconEntry[] = [
   {
     pattern: "program manager",
     kind: "phrase",
+    seniority: "Manager",
     function: ["Product", "Engineering"],
     note: "the same methodology fork under the older name",
   },
@@ -500,7 +569,7 @@ const PRODUCT_ENTRIES: LexiconEntry[] = [
 
 const DESIGN_ENTRIES: LexiconEntry[] = [
   { pattern: "design", kind: "token", function: "Design" },
-  { pattern: "designer", kind: "token", function: "Design" },
+  { pattern: "designer", kind: "token", function: "Design", seniority: "IC" },
   { pattern: "creative", kind: "token", function: "Design" },
   { pattern: "ux", kind: "token", function: "Design" },
   { pattern: "ui", kind: "token", function: "Design" },
@@ -513,6 +582,7 @@ const DESIGN_ENTRIES: LexiconEntry[] = [
   {
     pattern: "product designer",
     kind: "phrase",
+    seniority: "IC",
     function: "Design",
     note: "Design, not Product: without the phrase the two tokens report a gap",
   },
@@ -535,7 +605,7 @@ const DATA_ENTRIES: LexiconEntry[] = [
     function: "Data",
     note: "kept as a phrase so `science` never stands alone",
   },
-  { pattern: "scientist", kind: "token", function: "Data" },
+  { pattern: "scientist", kind: "token", function: "Data", seniority: "IC" },
   {
     pattern: "business intelligence",
     kind: "phrase",
@@ -545,6 +615,7 @@ const DATA_ENTRIES: LexiconEntry[] = [
   {
     pattern: "data engineer",
     kind: "phrase",
+    seniority: "IC",
     function: ["Data", "Engineering"],
     note: "a declared fork: a platform role inside Engineering in some orgs, part of the data team in others",
   },
@@ -561,11 +632,18 @@ const FINANCE_ENTRIES: LexiconEntry[] = [
   { pattern: "finance", kind: "token", function: "Finance" },
   { pattern: "financial", kind: "token", function: "Finance" },
   { pattern: "accounting", kind: "token", function: "Finance" },
-  { pattern: "accountant", kind: "token", function: "Finance" },
+  { pattern: "accountant", kind: "token", function: "Finance", seniority: "IC" },
   { pattern: "controller", kind: "token", function: "Finance" },
   { pattern: "treasury", kind: "token", function: "Finance" },
   { pattern: "fpa", kind: "token", function: "Finance" },
   { pattern: "procurement", kind: "token", function: "Finance" },
+  {
+    pattern: "cfo",
+    kind: "token",
+    function: "Finance",
+    seniority: "CSuite",
+    note: "the token twin of the exact entry, so `Interim CFO` and `Fractional CFO` resolve",
+  },
   {
     pattern: "cfo",
     kind: "exact",
@@ -580,7 +658,7 @@ const HR_ENTRIES: LexiconEntry[] = [
   { pattern: "people", kind: "token", function: "HR" },
   { pattern: "talent", kind: "token", function: "HR" },
   { pattern: "recruiting", kind: "token", function: "HR" },
-  { pattern: "recruiter", kind: "token", function: "HR" },
+  { pattern: "recruiter", kind: "token", function: "HR", seniority: "IC" },
   {
     pattern: "human resources",
     kind: "phrase",
@@ -607,6 +685,13 @@ const HR_ENTRIES: LexiconEntry[] = [
   },
   {
     pattern: "chro",
+    kind: "token",
+    function: "HR",
+    seniority: "CSuite",
+    note: "the token twin of the exact entry, so `Interim CHRO` and `Fractional CHRO` resolve",
+  },
+  {
+    pattern: "chro",
     kind: "exact",
     function: "HR",
     seniority: "CSuite",
@@ -616,8 +701,8 @@ const HR_ENTRIES: LexiconEntry[] = [
 
 const LEGAL_ENTRIES: LexiconEntry[] = [
   { pattern: "legal", kind: "token", function: "Legal" },
-  { pattern: "counsel", kind: "token", function: "Legal" },
-  { pattern: "paralegal", kind: "token", function: "Legal" },
+  { pattern: "counsel", kind: "token", function: "Legal", seniority: "IC" },
+  { pattern: "paralegal", kind: "token", function: "Legal", seniority: "IC" },
   { pattern: "compliance", kind: "token", function: "Legal" },
   {
     pattern: "general counsel",
@@ -664,6 +749,13 @@ const IT_ENTRIES: LexiconEntry[] = [
   },
   {
     pattern: "cio",
+    kind: "token",
+    function: "IT",
+    seniority: "CSuite",
+    note: "the token twin of the exact entry, so `Interim CIO` and `Fractional CIO` resolve",
+  },
+  {
+    pattern: "cio",
     kind: "exact",
     function: "IT",
     seniority: "CSuite",
@@ -697,6 +789,13 @@ const SECURITY_ENTRIES: LexiconEntry[] = [
     kind: "phrase",
     function: "Security",
     note: "Security, not Engineering: the security org owns the role even though the word is engineer",
+  },
+  {
+    pattern: "ciso",
+    kind: "token",
+    function: "Security",
+    seniority: "CSuite",
+    note: "the token twin of the exact entry, so `Interim CISO` and `Fractional CISO` resolve",
   },
   {
     pattern: "ciso",
@@ -800,6 +899,20 @@ const EXEC_ENTRIES: LexiconEntry[] = [
     function: "ExecGeneral",
     seniority: "CSuite",
     note: "the whole company is the function; nothing narrower is true",
+  },
+  {
+    pattern: "chief executive",
+    kind: "phrase",
+    function: "ExecGeneral",
+    seniority: "CSuite",
+    note: "the British short form of CEO; the longer phrase still wins when `officer` is present",
+  },
+  {
+    pattern: "gm",
+    kind: "exact",
+    function: "ExecGeneral",
+    seniority: ["Director", "VP"],
+    note: "the abbreviated General Manager; exact so it cannot fire inside a longer string",
   },
   {
     pattern: "chief executive officer",

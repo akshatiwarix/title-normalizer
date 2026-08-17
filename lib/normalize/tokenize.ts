@@ -129,7 +129,6 @@ const CREDENTIALS = new Set([
   "cma",
   "mph",
   "pe",
-  "csm",
   "safe",
   "itil",
 ]);
@@ -173,6 +172,10 @@ function foldDiacritics(s: string): string {
  */
 function deEmoji(fragment: string): string {
   return fragment.replace(/\p{Extended_Pictographic}/gu, " ").replace(/\s+/g, " ").trim();
+}
+
+function hasRegionToken(fragment: string): boolean {
+  return words(fragment).some((word) => REGION_TOKENS[word] !== undefined);
 }
 
 function looksJunky(fragment: string): boolean {
@@ -286,11 +289,23 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
   const stripped: string[] = [];
   const kept: Part[] = [];
 
+  let anyJunk = false;
   for (const part of parts) {
     const withoutEmoji = deEmoji(part.text);
-    if (withoutEmoji !== part.text) stripped.push("emoji");
+    if (withoutEmoji !== part.text) {
+      stripped.push("emoji");
+      anyJunk = true;
+    }
     if (withoutEmoji.length === 0) continue;
-    if (looksJunky(withoutEmoji) || !isRoleBearing(withoutEmoji)) {
+    if (looksJunky(withoutEmoji)) {
+      stripped.push(withoutEmoji);
+      anyJunk = true;
+      continue;
+    }
+    // A region token counts as content even though the lexicon knows nothing about
+    // it: `EMEA` is a geography with no role attached, which is a different fact
+    // from a company name, and the region-only branch below says so.
+    if (!isRoleBearing(withoutEmoji) && !hasRegionToken(withoutEmoji)) {
       stripped.push(withoutEmoji);
       continue;
     }
@@ -298,14 +313,23 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
   }
 
   if (kept.length === 0) {
+    // `garbage-only` is for junk — emoji, URLs, taglines, strings with no letters.
+    // A string of ordinary words the lexicon simply does not know is `no-evidence`:
+    // `Evangelist` is a real title this engine cannot read, and calling it garbage
+    // would be a different claim than the true one.
+    const reason: UnknownReason = anyJunk ? "garbage-only" : "no-evidence";
     return {
       ...base,
       stripped,
       signal: {
-        reason: "garbage-only",
+        reason,
         because:
           stripped.length > 0
-            ? [`nothing role-bearing survived: ${stripped.map((s) => `“${s}”`).join(", ")}`]
+            ? [
+                reason === "garbage-only"
+                  ? `nothing role-bearing survived: ${stripped.map((s) => `“${s}”`).join(", ")}`
+                  : `no lexicon entry for ${stripped.map((s) => `“${s}”`).join(", ")}`,
+              ]
             : ["the input contained no letters"],
       },
     };

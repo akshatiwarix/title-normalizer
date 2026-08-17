@@ -68,11 +68,29 @@ function noEvidence<T>(unclaimed: string[], matches: LexiconMatch[], what: strin
 
 /* ── function ────────────────────────────────────────────────────────────── */
 
+/** An entry whose only claim is `ExecGeneral` — the residual, company-wide function. */
+function claimsOnlyExec(match: LexiconMatch): boolean {
+  const value = match.entry.function;
+  if (value === undefined) return false;
+  const names = Array.isArray(value) ? value : [value];
+  return names.length === 1 && names[0] === "ExecGeneral";
+}
+
 function resolveFunction(
   matches: LexiconMatch[],
   unclaimed: string[],
 ): Verdict<FunctionId> {
-  const contributors = mostSpecific(matches.filter((m) => m.entry.function !== undefined));
+  const named = matches.filter((m) => m.entry.function !== undefined);
+
+  // `ExecGeneral` is the *residual* function: it means "the whole company", so any
+  // concrete function named in the same segment outranks it regardless of
+  // specificity. `Managing Director, Sales` runs a sales org, not a company, and
+  // without this rule the phrase entry would beat the `sales` token and say so.
+  const concrete = named.filter((m) => !claimsOnlyExec(m));
+  const pool =
+    concrete.length > 0 && mostSpecific(named).every(claimsOnlyExec) ? concrete : named;
+
+  const contributors = mostSpecific(pool);
   if (contributors.length === 0) return noEvidence(unclaimed, matches, "a function");
 
   const because = evidenceOf(contributors);
@@ -136,7 +154,10 @@ function resolveSeniority(
   matches: LexiconMatch[],
   unclaimed: string[],
 ): Verdict<SeniorityId> {
-  const contributors = mostSpecific(matches.filter((m) => m.entry.seniority !== undefined));
+  // Every contributor, not just the most specific tier: seniority applies the
+  // ceiling rule *before* specificity, so a `senior` token must stay in the running
+  // against the phrase that named the function.
+  const contributors = matches.filter((m) => m.entry.seniority !== undefined);
   if (contributors.length === 0) return noEvidence(unclaimed, matches, "a rung");
 
   const intervals = contributors.map((match) => ({
@@ -146,12 +167,25 @@ function resolveSeniority(
     ),
   }));
 
-  // The most senior rung the string names wins: `Senior Director` is a Director,
-  // not a senior IC. Contributors that top out at the same rung are intersected —
-  // two claims about the same ceiling should agree, and when they do not, that is
-  // a gap rather than a coin flip.
+  // Two rules, in order.
+  //
+  // **Ceiling first.** The most senior rung the string names wins: `Senior Director`
+  // is a Director, not a senior IC, and `Senior Sales Engineer` is a senior IC even
+  // though the phrase that names its function tops out lower.
+  //
+  // **Then specificity.** Among contributors that top out at the same rung, the most
+  // specific one governs: `Associate Director` must keep the phrase's `[Manager,
+  // Director]` straddle rather than intersecting it with the bare `director` token
+  // down to a point. Contributors of equal specificity *and* equal ceiling are
+  // intersected — two claims about the same ceiling should agree, and when they do
+  // not, that is a gap rather than a coin flip.
   const ceiling = Math.max(...intervals.map(({ iv }) => rankOf(iv.hi)));
-  const top = intervals.filter(({ iv }) => rankOf(iv.hi) === ceiling);
+  const atCeiling = intervals.filter(({ iv }) => rankOf(iv.hi) === ceiling);
+  const top = atCeiling.filter(
+    ({ match }) =>
+      KIND_RANK[match.entry.kind] ===
+      Math.min(...atCeiling.map(({ match: other }) => KIND_RANK[other.entry.kind])),
+  );
   const because = evidenceOf(top.map(({ match }) => match));
 
   let combined = top[0]?.iv;

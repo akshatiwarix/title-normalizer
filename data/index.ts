@@ -8,10 +8,17 @@
 import { corpusSchema } from "@/lib/normalize/schema";
 import type { Corpus } from "@/lib/normalize/types";
 import generatedJson from "./generated.json";
+import { ADVERSARIAL } from "./adversarial";
 
 export const GENERATED: Corpus = corpusSchema.parse(generatedJson);
 
-export const CORPORA: Corpus[] = [GENERATED];
+export { ADVERSARIAL };
+
+/**
+ * Order matters for display only. The two are never averaged: two thousand
+ * generated titles would bury the 120 that are the actual test.
+ */
+export const CORPORA: Corpus[] = [ADVERSARIAL, GENERATED];
 
 export function corpusById(id: string): Corpus | undefined {
   return CORPORA.find((corpus) => corpus.id === id);
