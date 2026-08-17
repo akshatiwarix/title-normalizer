@@ -351,10 +351,28 @@ const REVOPS_ENTRIES: LexiconEntry[] = [
     note: "BizOps folds into RevOps because this taxonomy has no standalone Ops function, per the taxonomy decision",
   },
   {
+    pattern: "revenue ops",
+    kind: "phrase",
+    function: "RevOps",
+    note: "the abbreviated form; without it `revenue` and `ops` disagree and report a gap",
+  },
+  {
+    pattern: "business ops",
+    kind: "phrase",
+    function: "RevOps",
+    note: "the abbreviated form of business operations",
+  },
+  {
     pattern: "deal desk",
     kind: "phrase",
     function: "RevOps",
     note: "deal desk is a RevOps team even when it reports to Finance",
+  },
+  {
+    pattern: "sales enablement",
+    kind: "phrase",
+    function: "RevOps",
+    note: "enablement is RevOps; without the phrase, `sales` and `enablement` disagree and report a gap",
   },
   {
     pattern: "enablement",
@@ -483,6 +501,7 @@ const PRODUCT_ENTRIES: LexiconEntry[] = [
 const DESIGN_ENTRIES: LexiconEntry[] = [
   { pattern: "design", kind: "token", function: "Design" },
   { pattern: "designer", kind: "token", function: "Design" },
+  { pattern: "creative", kind: "token", function: "Design" },
   { pattern: "ux", kind: "token", function: "Design" },
   { pattern: "ui", kind: "token", function: "Design" },
   {
@@ -490,6 +509,12 @@ const DESIGN_ENTRIES: LexiconEntry[] = [
     kind: "phrase",
     function: "Design",
     note: "the expanded form of UX",
+  },
+  {
+    pattern: "product designer",
+    kind: "phrase",
+    function: "Design",
+    note: "Design, not Product: without the phrase the two tokens report a gap",
   },
   {
     pattern: "creative director",
@@ -575,6 +600,12 @@ const HR_ENTRIES: LexiconEntry[] = [
     note: "People Ops is HR, not RevOps — the `operations` token would otherwise claim it",
   },
   {
+    pattern: "people ops",
+    kind: "phrase",
+    function: "HR",
+    note: "the abbreviated form of People Operations; `ops` alone would claim it for RevOps",
+  },
+  {
     pattern: "chro",
     kind: "exact",
     function: "HR",
@@ -654,6 +685,18 @@ const SECURITY_ENTRIES: LexiconEntry[] = [
     kind: "phrase",
     function: "Security",
     note: "SecOps is Security, not RevOps — the `operations` token would otherwise claim it",
+  },
+  {
+    pattern: "security ops",
+    kind: "phrase",
+    function: "Security",
+    note: "the abbreviated form of SecOps",
+  },
+  {
+    pattern: "security engineer",
+    kind: "phrase",
+    function: "Security",
+    note: "Security, not Engineering: the security org owns the role even though the word is engineer",
   },
   {
     pattern: "ciso",
@@ -882,6 +925,8 @@ export type CompiledLexicon = {
   exact: Compiled[];
   phrases: Compiled[];
   tokens: Map<string, LexiconEntry>;
+  /** Every word appearing in any entry of any kind. Used by the evidence score. */
+  vocabulary: Set<string>;
 };
 
 export function compileLexicon(entries: LexiconEntry[] = LEXICON): CompiledLexicon {
@@ -890,7 +935,15 @@ export function compileLexicon(entries: LexiconEntry[] = LEXICON): CompiledLexic
     const key = compiled.tokens[0];
     if (key !== undefined) tokens.set(key, compiled.entry);
   }
-  return { entries, exact: compile(entries, "exact"), phrases: compile(entries, "phrase"), tokens };
+  const vocabulary = new Set<string>();
+  for (const entry of entries) for (const word of patternTokens(entry.pattern)) vocabulary.add(word);
+  return {
+    entries,
+    exact: compile(entries, "exact"),
+    phrases: compile(entries, "phrase"),
+    tokens,
+    vocabulary,
+  };
 }
 
 export const COMPILED = compileLexicon();
@@ -963,12 +1016,29 @@ export function matchSegment(
 }
 
 /**
- * Does this fragment of a raw title contain anything the lexicon can act on?
- * `tokenize` takes this as a predicate so it can drop `Acme` out of
- * `VP Sales | Acme` without importing the lexicon itself.
+ * How much of this fragment does the lexicon recognise, in words?
+ *
+ * `tokenize` takes this as a function rather than importing the lexicon, and drops
+ * any fragment that scores zero — that is how `VP Sales | Acme` loses `Acme`. The
+ * score counts words the lexicon claims *plus* words that appear only inside a
+ * phrase, so `Customer` counts even though it resolves to nothing alone: a spaced
+ * dash in `Customer - Success Associate` must not cost the title its first word.
+ *
+ * Every kind of entry contributes vocabulary, `exact` included: `CEO, LATAM` must
+ * not read as a company name simply because `ceo` exists only as an exact entry.
  */
-export function hasEvidence(fragment: string, lexicon: CompiledLexicon = COMPILED): boolean {
+export function evidenceScore(fragment: string, lexicon: CompiledLexicon = COMPILED): number {
   const tokens = patternTokens(fragment);
-  if (tokens.length === 0) return false;
-  return matchSegment(tokens, lexicon).matches.length > 0;
+  if (tokens.length === 0) return 0;
+  const { matches, unclaimed } = matchSegment(tokens, lexicon);
+  const claimed = matches.reduce((total, match) => total + (match.to - match.from), 0);
+  // A word that only ever appears *inside* a phrase — `customer`, `solutions`,
+  // `human` — claims nothing on its own but is still lexicon vocabulary. Counting it
+  // is what keeps `Customer - Success Associate` from losing its first word.
+  const inVocabulary = unclaimed.filter((token) => lexicon.vocabulary.has(token)).length;
+  return claimed + inVocabulary;
+}
+
+export function hasEvidence(fragment: string, lexicon: CompiledLexicon = COMPILED): boolean {
+  return evidenceScore(fragment, lexicon) > 0;
 }

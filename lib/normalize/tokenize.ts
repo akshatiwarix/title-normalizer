@@ -84,7 +84,7 @@ const LANGUAGE_MARKERS = new Set([
   "genel",
 ]);
 
-const EMOJI = /\p{Extended_Pictographic}/u;
+
 const URLISH = /https?:\/\/|www\.|\.com\b|\.io\b|\.ai\b|\.co\b/;
 const HASHTAG = /#\w/;
 const JUNK_PHRASES = [
@@ -165,22 +165,72 @@ function foldDiacritics(s: string): string {
   return s.normalize("NFD").replace(/\p{Diacritic}/gu, "");
 }
 
+/**
+ * Emoji are decoration, not delimiters: `Sales Intern 🚀🚀` arrives with no
+ * separator at all, so judging the part as junk because it contains a rocket would
+ * throw away a perfectly ordinary title. They are removed first and reported as
+ * stripped; what remains is judged on its own.
+ */
+function deEmoji(fragment: string): string {
+  return fragment.replace(/\p{Extended_Pictographic}/gu, " ").replace(/\s+/g, " ").trim();
+}
+
 function looksJunky(fragment: string): boolean {
   const lower = fragment.toLowerCase();
-  if (EMOJI.test(fragment) || URLISH.test(lower) || HASHTAG.test(fragment)) return true;
+  if (URLISH.test(lower) || HASHTAG.test(fragment)) return true;
   if (JUNK_PHRASES.some((phrase) => lower.includes(phrase))) return true;
   return !/[a-z]/i.test(foldDiacritics(fragment));
 }
 
 /**
- * A part boundary is a pipe, a bullet, an `@`, or a spaced dash — the four ways
- * people staple a company, a tagline or an emoji onto a job title.
+ * Titles arrive in parts, and the delimiter says how the parts relate.
+ *
+ * A pipe or a bullet joins *peers*: `Founder | CEO` is two roles, and a role-bearing
+ * part on each side is a compound title. An `@`, a spaced dash or a run of spaces
+ * is a *separator*: `Director - Marketing` is one role written with punctuation, and
+ * treating that dash as a conjunction would split a perfectly ordinary title into a
+ * rung with no function and a function with no rung. Both forms shed a part that the
+ * lexicon has nothing to say about, which is how `VP Sales | Acme` loses `Acme`.
  */
-function splitParts(raw: string): string[] {
-  return raw
-    .split(/[|•·]|@|\s[-–—]\s|\s{3,}/)
-    .map((part) => part.trim())
-    .filter((part) => part.length > 0);
+type Part = { text: string; peer: boolean };
+
+function splitParts(raw: string): Part[] {
+  const parts: Part[] = [];
+  let buffer = "";
+  let peer = false;
+
+  const flush = () => {
+    const text = buffer.trim();
+    if (text.length > 0) parts.push({ text, peer });
+    buffer = "";
+  };
+
+  const peerBoundary = /[|•·]/;
+  const separatorBoundary = /^(@|\s[-–—]\s|\s{3,})/;
+
+  for (let index = 0; index < raw.length; ) {
+    const rest = raw.slice(index);
+    const separator = separatorBoundary.exec(rest);
+    const char = raw[index] ?? "";
+
+    if (peerBoundary.test(char)) {
+      flush();
+      peer = true;
+      index += 1;
+      continue;
+    }
+    if (separator) {
+      flush();
+      peer = false;
+      index += separator[0].length;
+      continue;
+    }
+    buffer += char;
+    index += 1;
+  }
+  flush();
+
+  return parts;
 }
 
 function words(fragment: string): string[] {
@@ -234,11 +284,17 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
 
   const parts = splitParts(raw);
   const stripped: string[] = [];
-  const kept: string[] = [];
+  const kept: Part[] = [];
 
   for (const part of parts) {
-    if (looksJunky(part) || !isRoleBearing(part)) stripped.push(part);
-    else kept.push(part);
+    const withoutEmoji = deEmoji(part.text);
+    if (withoutEmoji !== part.text) stripped.push("emoji");
+    if (withoutEmoji.length === 0) continue;
+    if (looksJunky(withoutEmoji) || !isRoleBearing(withoutEmoji)) {
+      stripped.push(withoutEmoji);
+      continue;
+    }
+    kept.push({ text: withoutEmoji, peer: part.peer });
   }
 
   if (kept.length === 0) {
@@ -259,8 +315,8 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
   const regions: RegionHit[] = [];
 
   kept.forEach((part, index) => {
-    if (index > 0) tokens.push(CONJUNCTION);
-    for (const word of words(part)) {
+    if (index > 0 && part.peer) tokens.push(CONJUNCTION);
+    for (const word of words(part.text)) {
       if (CONJUNCTIONS.has(word)) {
         if (tokens.length > 0 && tokens[tokens.length - 1] !== CONJUNCTION) tokens.push(CONJUNCTION);
         continue;

@@ -99,3 +99,18 @@ describe("lexicon patterns", () => {
     expect(patternTokens("chief of staff")).toEqual(["chief", "staff"]);
   });
 });
+
+describe("delimiters", () => {
+  it("reads a spaced dash as punctuation inside one role, not as a second role", () => {
+    expect(tokenize("Director - Marketing").tokens).toEqual(["director", "marketing"]);
+    expect(tokenize("Manager @ Customer Success").tokens).toEqual([
+      "manager",
+      "customer",
+      "success",
+    ]);
+  });
+
+  it("reads a pipe between two role-bearing parts as a second role", () => {
+    expect(tokenize("Founder | CEO").tokens).toEqual(["founder", CONJUNCTION, "ceo"]);
+  });
+});

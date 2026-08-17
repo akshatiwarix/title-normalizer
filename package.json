@@ -10,7 +10,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "sweep": "vite-node -c vitest.config.mts scripts/sweep.mts"
+    "sweep": "vite-node -c vitest.config.mts scripts/sweep.mts",
+    "generate": "vite-node -c vitest.config.mts scripts/generate.mts"
   },
   "dependencies": {
     "@google/genai": "^2.17.1",
