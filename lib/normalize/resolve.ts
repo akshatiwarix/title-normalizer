@@ -22,15 +22,8 @@
 import { COMPILED, hasEvidence, matchSegment, type CompiledLexicon } from "./lexicon";
 import { expand, fromEntryValue, hull, intersect, type Interval } from "./ladder";
 import { segmentTokens, selectPrimary } from "./segment";
-import {
-  bandOf,
-  rankOf,
-  type BandId,
-  type FunctionId,
-  type ScopeId,
-  type SeniorityId,
-} from "./taxonomy";
-import { isPrunedPersona, personaLabel } from "./taxonomy";
+import { rankOf, type FunctionId, type ScopeId, type SeniorityId } from "./taxonomy";
+import { deriveBand, derivePersona } from "./persona";
 import { tokenize, type RegionHit, type Tokenized } from "./tokenize";
 import {
   ambiguous,
@@ -212,65 +205,6 @@ function resolveScope(regions: RegionHit[], matches: LexiconMatch[]): Verdict<Sc
   return resolved("None", ["no region token present"]);
 }
 
-/* ── derived: band and persona ───────────────────────────────────────────── */
-
-/** A gap anywhere upstream is a gap here; otherwise the fork propagates as a fork. */
-function inheritedReason(...verdicts: Verdict<unknown>[]): AmbiguityReason {
-  for (const verdict of verdicts) {
-    if (verdict.state === "ambiguous" && verdict.reason === "lexicon-gap") return "lexicon-gap";
-  }
-  return "taxonomy-fork";
-}
-
-/**
- * The interval collapse worth noticing: `Head of Sales` is ambiguous between
- * Director and VP, and both are the Leader band, so the *band* resolves. An
- * honest abstention on one dimension does not have to propagate to every other.
- */
-export function deriveBand(seniority: Verdict<SeniorityId>): Verdict<BandId> {
-  if (seniority.state === "unknown") {
-    return unknown(seniority.reason, seniority.because);
-  }
-  const rungs = seniority.state === "resolved" ? [seniority.value] : seniority.candidates;
-  const bands = [...new Set(rungs.map(bandOf))];
-  const only = bands[0];
-  if (bands.length === 1 && only !== undefined) {
-    return resolved(only, seniority.because);
-  }
-  return ambiguous(bands, inheritedReason(seniority), seniority.because);
-}
-
-export function derivePersona(
-  fn: Verdict<FunctionId>,
-  band: Verdict<BandId>,
-): Verdict<string> {
-  if (fn.state === "unknown") return unknown(fn.reason, fn.because);
-  if (band.state === "unknown") return unknown(band.reason, band.because);
-
-  const functions = fn.state === "resolved" ? [fn.value] : fn.candidates;
-  const bands = band.state === "resolved" ? [band.value] : band.candidates;
-  const because = [...new Set([...fn.because, ...band.because])];
-
-  const labels = new Set<string>();
-  for (const f of functions) {
-    for (const b of bands) {
-      if (isPrunedPersona(f, b)) continue;
-      const label = personaLabel(f, b);
-      if (label) labels.add(label);
-    }
-  }
-
-  const values = [...labels];
-  const only = values[0];
-  if (values.length === 0) {
-    return unknown("no-evidence", [
-      `every (function, band) pair was pruned: ${functions.join("/")} × ${bands.join("/")}`,
-    ]);
-  }
-  if (values.length === 1 && only !== undefined) return resolved(only, because);
-  return ambiguous(values, inheritedReason(fn, band), because);
-}
-
 /* ── the pipeline ────────────────────────────────────────────────────────── */
 
 function haltedResult(raw: string, tokenized: Tokenized, reason: UnknownReason): Result {
@@ -338,3 +272,7 @@ export function normalizeTitle(raw: string, lexicon: CompiledLexicon = COMPILED)
 export function normalizeTitles(titles: string[], lexicon: CompiledLexicon = COMPILED): Result[] {
   return titles.map((title) => normalizeTitle(title, lexicon));
 }
+
+// Re-exported so callers that think of the pipeline as one thing do not have to
+// know which module the derived dimensions live in.
+export { deriveBand, derivePersona } from "./persona";
