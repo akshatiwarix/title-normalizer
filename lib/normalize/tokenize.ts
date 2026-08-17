@@ -220,6 +220,18 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
     };
   }
 
+  // Before junk filtering, not after: a foreign title has no lexicon evidence, so
+  // the role-bearing predicate would throw the whole string away and report
+  // `garbage-only`. `Directeur Commercial` is not garbage — it is a title in a
+  // language this engine declines to handle, and the reason has to say so.
+  const rawMarker = words(raw).find((word) => LANGUAGE_MARKERS.has(word));
+  if (rawMarker) {
+    return {
+      ...base,
+      signal: { reason: "non-english", because: [`language marker: “${rawMarker}”`] },
+    };
+  }
+
   const parts = splitParts(raw);
   const stripped: string[] = [];
   const kept: string[] = [];
@@ -273,18 +285,6 @@ export function tokenize(raw: string, options: TokenizeOptions = {}): Tokenized 
 
   while (tokens.length > 0 && tokens[tokens.length - 1] === CONJUNCTION) tokens.pop();
   while (tokens.length > 0 && tokens[0] === CONJUNCTION) tokens.shift();
-
-  const marker = tokens.find((token) => LANGUAGE_MARKERS.has(token));
-  if (marker) {
-    return {
-      ...base,
-      stripped,
-      regions,
-      tokens,
-      normalized: tokens.join(" "),
-      signal: { reason: "non-english", because: [`language marker: “${marker}”`] },
-    };
-  }
 
   if (tokens.length === 0) {
     return {
